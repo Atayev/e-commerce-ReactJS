@@ -1,4 +1,5 @@
 {
+    "menu" :["Home" , "About" , "Home Furniture" , "Office Furniture" , "Hospital Furniture", "Contact"],
     "products": {
         "homefurniture":[
             {

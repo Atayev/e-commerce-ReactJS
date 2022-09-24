@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 :root {
   --nav:  #2f333a;
   --slider:  #e7e7e7;
@@ -13,4 +15,35 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.header {
+  background: white;
+  width: 100vw;
+}
+.nav {
+  width: 100vw;
+}
+.menuItem >a{
+  color: white;
+  font-size: 1em;
+  font-family:  'Open Sans';
+  transition: all 0.4s ease 0s;
+}
+.menuItem>a:hover {
+  color: var(--specialOrange);
+}
+.bg-btn {
+  background-color: var(--specialOrange);
+  color: white;
+  font: 16px 'Raleway' sans-serif;
+  border-radius: 0;
+  line-height: 1;
+  border: none;
+  transition: all 0.4s ease 0s;
+  padding: 17px 36px;
+}
+.bg-btn:hover {
+  background-color: black;
+  color: var(--specialOrange);
+  border:none;
 }

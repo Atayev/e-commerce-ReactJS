@@ -1,9 +1,10 @@
 import React from 'react'
-
-const Button = () => {
+import Button from 'react-bootstrap/Button';
+const ButtonS = () => {
+  
   return (
-    <div>Button</div>
+    <Button className='bg-btn'>Shop Now</Button>
   )
 }
 
-export default Button
+export default ButtonS

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = () => {
+const Slider = () => {
   return (
-    <div>Button</div>
+    <div>Slider</div>
   )
 }
 
-export default Button
+export default Slider
