@@ -32,6 +32,11 @@ body {
 .menuItem>a:hover {
   color: var(--specialOrange);
 }
+.bg-slider{
+  background-color: var(--slider);
+}
+
+
 .bg-btn {
   background-color: var(--specialOrange);
   color: white;
