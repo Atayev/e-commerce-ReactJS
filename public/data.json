@@ -1,12 +1,14 @@
 {
-    "products": [
-        {
-            "id":"adsfasdf",
-            "category":"",
-            "availability":"",
-            "name":"fasdfkamsdflka",
-            "image":"http",
-            "description":"fasdfa"
-        }
-    ]
+    "products": {
+        "homefurniture":[
+            {
+                "id":"1",
+                "category":"homefurniture",
+                "availability":"9",
+                "name":"Comfortable sofa",
+                "images":["https://i.ibb.co/6FyQJt1/sofa.jpg","https://i.ibb.co/S7k7MpG/sofa2.jpg"],
+                "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
+            }
+        ]
+    }
 }
