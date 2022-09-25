@@ -12,7 +12,7 @@ import { useEffect,useState } from 'react'
 const Header = () => {
   const [nav, setNav] = useState()
   const [state, setState] = useState([])
-  
+
   useEffect(() => {
     const fetchData = async() => {
       const response = await fetch('../data.json')
@@ -22,11 +22,12 @@ const Header = () => {
     }
     fetchData()
   }, [nav, setState])
+
   
   return (
     <div className='header'>
       <Container>
-      <div className='d-flex justify-content-between my-5'>
+      <div className='d-flex justify-content-between py-5'>
         <div className='logo'>
           <img src={logo} alt="Furns - Furniture" />
         </div>
@@ -53,7 +54,7 @@ const Header = () => {
                         state?.map((item,key) => (
                           <Link key={key} to={`${item[0]}`} className='text-decoration-none px-1 mx-3'>{item[1]}</Link>
                         ))
-                      }
+                }
                 </Nav>
               </Navbar.Collapse>
           </Container>

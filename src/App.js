@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+      <Slider2 />
     </BrowserRouter>
   );
 }
