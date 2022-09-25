@@ -9,6 +9,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Slider2 />
+      <StickyModal />
     </BrowserRouter>
   );
 }

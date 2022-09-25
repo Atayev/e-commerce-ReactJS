@@ -1,22 +1,26 @@
 .basket{
-    width: 6rem;
-    height: 7rem;
-    border: 1px solid black;
-    background-color: var(--nav);
-    border-radius: 5px;
-    row-gap: 0.2rem;
+   right: 0px;
+    margin: 0px;
+    padding: 15px;
+    display: flex;
+    z-index: 999;
     position: fixed;
-    right: 1%;
-    top: 40%;
-    z-index: 444;
-    cursor: pointer;
+    -webkit-box-align: center;
+    align-items: center;
+    top: calc(110px + 30%);
+    flex-direction: column;
+    border-radius: 3px 0px 0px 3px;
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 75%) 0px 0px 16px -1px;
+    font-family: "Open Sans";
+    background-color: rgb(47, 51, 58);
+    font-weight: 600;
 }
-
-
-.basketlogo{
+.basket > svg {
     color: var(--specialOrange);
-    font-size: 1.5rem;
 }
+
+
 .items{
     color: aliceblue;
     font-size: 0.8rem;

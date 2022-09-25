@@ -1,12 +1,12 @@
 import React from 'react'
 import './stickymodal.css'
 import '../index.css'
-
+import {FiShoppingBag} from 'react-icons/fi'
 
 const StickyModal = () => {
     return (
-        <div className='basket d-flex flex-column align-items-center justify-content-center'>
-            <div className='basketlogo'><i className="fa-solid fa-bag-shopping"></i></div>
+        <div className='basket'>
+                <FiShoppingBag />
             <div className='items'>
                 <span>0</span> <span>items</span>
             </div>
