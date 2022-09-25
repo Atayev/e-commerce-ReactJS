@@ -36,6 +36,12 @@ body {
   background-color: var(--slider);
 }
 
+
+.bg-slider1{
+  background-color: #E7E7E7;
+}
+
+
 .bg-btn {
   background-color: var(--specialOrange);
   color: white;
@@ -51,4 +57,3 @@ body {
   color: var(--specialOrange);
   border:none;
 }
-
