@@ -4,7 +4,7 @@ const Slider = () => {
 
   return (
     <div>
-      slider
+      sliderdasfafds
     </div>
   ) 
 }
