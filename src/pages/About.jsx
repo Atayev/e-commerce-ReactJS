@@ -1,7 +1,19 @@
 import React from 'react'
+import { useEffect,useState  } from 'react'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Card from 'react-bootstrap/Card';
 const About = () => {
+  const [data,setData] = useState()
+  useEffect(() => {
+    const fetchData = async() => {
+      const response = await fetch('./data.json')
+      const data = await response.json()
+      setData(data?.about)
+    }
+    fetchData()
+  },[])
+
   return (
     <div className='about'>
       <h1 className='text-dark text-center fs-1 pt-5'>About US</h1>
@@ -11,14 +23,20 @@ const About = () => {
             <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> About </Link>
           </Breadcrumb>
       </div>
-      <div className='aboutSection'>
-          <h2>Furns is a global furniture destination for somethings. We sell cutting-edge furniture and offer a wide variety of fashion-related content.</h2>
-        <div className='row'>
-          <div className="col-6">
-            <img src="" alt="" />
-            <h3></h3>
-            <p></p>
-            </div>
+      <div className='aboutSection bg-white px-5 mx-3 py-5 my-5eeeeeeee'>
+          <p className='text-justify aboutTitle2'>Furns is a global furniture destination for somethings. We sell cutting-edge furniture and offer a wide variety of fashion-related content.</p>
+          <div className='d-md-flex'>
+          {data?.map((item) => (
+            <Card className='aboutCard col-md-6 mx-1 mb-2 border-0'>
+            <Card.Img variant="top" className='aboutImage my-3 px-3' src={item?.image} />
+            <Card.Body>
+                <Card.Title className='fw-bold text-uppercase'>{ item?.title }</Card.Title>
+                <Card.Text>
+                  {item?.description}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          ))}
             
         
         </div>   

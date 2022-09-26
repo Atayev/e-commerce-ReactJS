@@ -121,8 +121,8 @@ li:hover{
 
 .about {
   background: #f4f5f8;
+  width: 100vw;
 }
-
 .aboutTitle {
   position: relative;
   color: rgb(71, 71, 71);
@@ -131,4 +131,16 @@ li:hover{
 
 .aboutTitle:hover {
   color:var(--specialOrange)
+}
+
+.aboutTitle2 {
+  font:700 2em "Raleway" ;
+  color: rgb(33, 33, 33);
+}
+.bg-white {
+  background: white;
+}
+
+.aboutImage {
+  height: 60%;
 }
