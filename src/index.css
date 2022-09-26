@@ -118,3 +118,17 @@ li:hover{
 .information > ul > li {
   font-size: .9em;
 }
+
+.about {
+  background: #f4f5f8;
+}
+
+.aboutTitle {
+  position: relative;
+  color: rgb(71, 71, 71);
+  font-weight: 500;
+}
+
+.aboutTitle:hover {
+  color:var(--specialOrange)
+}

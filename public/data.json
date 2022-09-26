@@ -163,6 +163,18 @@
                 "images":["https://i.ibb.co/xznV2kn/75-7.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }
+        ],
+        "about" : [
+            {
+                "image":"https://furns-react.netlify.app/_next/image?url=%2Fimages%2Fabout%2F02.jpg&w=1080&q=75",
+                "title":"Our Stores",
+                "description":"Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor."
+            },
+            {
+                "image":"https://furns-react.netlify.app/_next/image?url=%2Fimages%2Fabout%2F01.jpg&w=1080&q=75",
+                "title":"Our Stores",
+                "description":"Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor."
+            }
         ]
     }
 }

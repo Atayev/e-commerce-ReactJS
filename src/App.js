@@ -3,7 +3,7 @@ import Header from './components/Header';
 import { BrowserRouter } from 'react-router-dom'
 import Slider2 from './components/Slider2';
 import StickyModal from './components/StickyModal';
-
+import About from './pages/About'
 import Slider from './components/Slider';
 import Footer from './components/Footer';
 
@@ -15,12 +15,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Slider />
+      <About />
+      {/* <Slider />
       <Slider2 />
 
       <OurProducts/>
-
-      <StickyModal />
+      
+      <StickyModal /> */}
       <Footer />
     </BrowserRouter>
   );
