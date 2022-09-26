@@ -21,7 +21,7 @@ const Slider2 = () => {
       <div className='row'>
         {
           obj.map((it) => (
-            <Link to='/categories' className='col-2 p-5 d-flex justify-content-center align-items-center flex-column text-decoration-none'>
+            <Link to='/categories' className='circle-product col-2 p-5 d-flex justify-content-center align-items-center flex-column text-decoration-none'>
               <img src={it[1]} alt='ddc' />
               <span className='p-3'>{ it[0] }</span>
             </Link>

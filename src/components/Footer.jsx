@@ -16,7 +16,7 @@ const Footer = () => {
     }
     fetchData()
   }, [])
-  console.log(menus)
+ 
   
   return (
     <div className='footer'>

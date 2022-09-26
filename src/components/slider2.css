@@ -1,4 +1,4 @@
-.col-2{
+.circle-product {
     width: 11rem;
     height: 11rem;
     margin: 2rem;
@@ -9,20 +9,20 @@
     position: relative;
 }
 
-.col-2 img{
+.circle-product img {
     width: 4rem;
     height: 3rem;
 }
 
-.col-2 span{
+.circle-product span {
     color: var(--circle);
 }
 
-.col-2:hover{
+.circle-product:hover {
     border: none;
 }
 
-.col-2:before{
+.circle-product:before {
     content: '';
     width: 11rem;
     height: 11rem;
@@ -32,14 +32,18 @@
     position: absolute;
     display: none;
     animation: mymove 20s infinite;
-   }
-   
-   @keyframes mymove {
-       from {transform: rotate(0deg);}
-       to {transform: rotate(360deg);}
-     }
-
-.col-2:hover:before{
- display: block;
 }
 
+@keyframes mymove {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-product:hover:before {
+    display: block;
+}
