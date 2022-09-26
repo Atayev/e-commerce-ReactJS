@@ -1,9 +1,6 @@
 import React from 'react';
-// import data from '../../public/data.json';
 import { useEffect,useState } from 'react';
 import './slider.css';
-
-
 
 
 const Slider = () => {
@@ -13,8 +10,10 @@ const Slider = () => {
     const fetchData = async() => {
       const response = await fetch('../data.json')
       const data =  await response.json()
+
 console.log(data.slider[0]);
       setSlider(data?.slider) 
+
     }
     fetchData()
   },[])

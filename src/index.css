@@ -6,6 +6,7 @@
   --circle:  #43474e ;
   --productItem: #f1f1f1;
   --specialOrange: #ff7004;
+  --footer: #2f333a;
   --footer2: #212121;
 }
 body {
@@ -36,6 +37,7 @@ body {
   background-color: var(--slider);
 }
 
+
 .bg-slider1{
   background-color: #E7E7E7;
 }
@@ -52,7 +54,67 @@ body {
   padding: 17px 36px;
 }
 .bg-btn:hover {
-  background-color: black;
+  background-color: #474747;
   color: var(--specialOrange);
   border:none;
+}
+
+.footer {
+  background: var(--footer);
+  width: 100vw;
+}
+ul {
+  margin:0;
+  padding: 0;
+}
+.listItem {
+  transition: all 0.4s ease 0s;
+}
+.listItem:hover {
+  background: var(--specialOrange);
+  border-radius: 50%;
+}
+li {
+  transition: all 0.4s ease 0s;
+}
+li:hover{
+  color: var(--specialOrange);
+  padding-left: 5px;
+  translate: 5px 0;
+}
+.footerTitle {
+    font-size: 1.1em;
+    font-weight: 500;
+    position: relative;
+    letter-spacing: 1.2px;
+    color: rgb(255, 255, 255);
+}
+
+.footerInput {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    width: 100%;
+    text-transform: capitalize;
+    background: transparent;
+    border: 1px solid rgb(67, 71, 78);
+    border-radius: 0px;
+    text-align: left;
+    box-shadow: none;
+    padding-left: 20px;
+    padding-right: 10px;
+    transition: all 0.4s ease 0s;
+}
+.footerInput:focus {
+  border-color: var(--specialOrange);
+}
+.footerInput:hover {
+  border-color: var(--specialOrange);
+}
+
+.information > ul > li {
+  font-size: .9em;
 }

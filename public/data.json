@@ -21,7 +21,30 @@
             "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor."
         }
     ],
+    "latestnews" : [
+        {
+            "image":"https://i.ibb.co/z2WpTqx/news1.jpg",
+            "title":"EIUMOD TEMPOR INCIDIDUNT LABORE",
+            "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
+        },
+        {
+        "image":"https://i.ibb.co/NWzvNJ0/news2.jpg",
+        "title":"UT ENIM ADMINIM VENIAM, QUIS NOSTRUD",
+        "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
 
+         },
+        {
+        "image":"https://i.ibb.co/ykbKqFS/news3.jpg",
+        "title":"SPATIALIZE WITH THAT THE FURNS",
+        "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
+
+    }
+    ],
+
+    "footerMenus": {
+        "information" : ["About Us", "Manufactures", "Tracking Order", "Privacy&Polict", "Terms & Conditions"],
+        "myaccount": ["Login","My Cart", "WishList", "Compare", "My Account"]
+    },
     "products": {
         "homefurniture":[
             {
@@ -140,6 +163,7 @@
                 "images":["https://i.ibb.co/xznV2kn/75-7.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }
-        ]
+        ],
+    "fsdfasdf" : []
     }
 }
