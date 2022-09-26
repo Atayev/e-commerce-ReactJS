@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
 import {FaTelegramPlane} from 'react-icons/fa'
 const Footer = () => {
-  const [menuNames,setMenuNames]=useState()
+
   const [menus,setMenus]=useState()
   const iconf= [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
   useEffect(() => {
@@ -22,8 +22,8 @@ const Footer = () => {
     <div className='footer'>
       <Container>
         <div className="row">
-        <div className='col-md-3 py-5  aboutUs text-white'>
-          <h4 className='py-3'>About Us</h4>
+        <div className='col-md-3 py-md-5 aboutUs text-white'>
+          <h4 className='pt-4 mt-4 footerTitle text-uppercase'>About Us</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at laudantium eveniet exercitationem optio, soluta ab.</p>
           <div className='social text-white'>
             <ul className='d-flex'>
@@ -33,8 +33,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className='col-md-3 text-white py-5 information'>
-          <h4 className='py-3'>Information</h4>
+        <div className='col-md-3 text-white py-md-5 information'>
+          <h4 className='pt-3 footerTitle text-uppercase'>Information</h4>
           <ul>
             {
                 menus?.information.map((menu) => (
@@ -44,8 +44,8 @@ const Footer = () => {
           </ul>
         </div>
               
-        <div className='col-md-3 py-5 text-white information'>
-          <h4 className='py-3'>My Account</h4>
+        <div className='col-md-3 py-md-5 text-white information'>
+          <h4 className='pt-3 footerTitle text-uppercase'>My Account</h4>
           <ul>
             {
                 menus?.myaccount.map((menu) => (
@@ -54,10 +54,10 @@ const Footer = () => {
               }
           </ul>
         </div>
-          <div className='col-md-3 py-5 text-white newsletter'>
-            <h4 className='py-3'>NewsLetter</h4>
+          <div className='col-md-3 py-md-5  text-white newsletter'>
+            <h4 className='py-3 footerTitle'>News Letter</h4>
             <input type="email" className='footerInput' placeholder='Enter a Email Adress' />
-            <button className='bg-btn my-1 text-white'>
+            <button className='bg-btn my-3 text-white'>
               <FaTelegramPlane  className='text-white me-2 mb-1'/>
               Subscribe
             </button>
