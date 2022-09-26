@@ -10,8 +10,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Slider2 />
       <Slider />
+      <Slider2 />
+        
       <StickyModal />
       <Footer />
     </BrowserRouter>
