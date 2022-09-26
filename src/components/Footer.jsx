@@ -23,7 +23,7 @@ const Footer = () => {
       <Container>
         <div className="row">
         <div className='col-md-3 py-md-5 aboutUs text-white'>
-          <h4 className='pt-4 mt-4 footerTitle text-uppercase'>About Us</h4>
+          <h4 className='pt-3 footerTitle text-uppercase'>About Us</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at laudantium eveniet exercitationem optio, soluta ab.</p>
           <div className='social text-white'>
             <ul className='d-flex'>

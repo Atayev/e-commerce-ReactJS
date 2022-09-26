@@ -13,6 +13,10 @@ function App() {
       <Header />
       <Slider />
       <Slider2 />
+<
+=======
+        
+>>>>>>> 4cbdf950daf4850db009a54ee7f2fa7265e71754
       <StickyModal />
       <ProductCard/>
       <Footer/>

@@ -1,5 +1,5 @@
 .bg-slider{
-    background-color: #E7E7E7;
+    background-color: var(--slider);
   }
 
 
@@ -9,8 +9,4 @@
         height: 250px;
         margin-left: 30px;
     }
-  }
-  .bg-warning{
-    border-color: var(--specialOrange);
-    background-color: var(--specialOrange)!important;
   }
