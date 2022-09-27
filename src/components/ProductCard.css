@@ -1,39 +1,47 @@
-.img-prod{
+.img-prod {
     height: 20rem;
 }
 
-.card-prod{
+.card-prod {
     width: 18rem;
     cursor: pointer;
     overflow: hidden;
     position: relative;
+ 
 }
 
 
-.product-row{
+
+.product-row {
     row-gap: 4rem;
     margin-top: 3rem;
 }
-.card-gr{
+
+.card-gr {
     width: 100%;
     height: 25rem;
 }
-.img-prod:hover{
+
+.img-prod:hover {
     transform: rotate(15deg);
 }
-.img-product-1{
+
+.img-product-1 {
     overflow: hidden;
     background-color: #f1f1f1;
-}
-.hover-effect:hover{
-    transition: all 0.3s;
- color: var(--specialOrange);
- font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.hearth{
-    width: 3rem;
-    height: 3rem;
+.hover-effect:hover {
+    transition: all 0.3s;
+    color: var(--specialOrange);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.hearth {
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -42,4 +50,95 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.filled{
+    background-image: url('../assets/img/heart-filled.svg');
+}
+.outline{
+    background-image: url('../assets/img/heart-outline.svg');
+}
+
+.right-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    top: 14%;
+    right: 6%;
+    visibility: hidden;
+ 
+   
+}
+@keyframes example {
+    from {
+        top: 20%;
+        opacity: 0; 
+    }
+
+    to {
+        top: 14%;
+        opacity: 1;
+    }
+}
+.card-prod:hover .right-icons {
+    animation-name: example;
+    animation-duration: 0.5s;
+    visibility: visible;
+}
+
+
+.icn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icn:hover {
+    transition: all 0.3s;
+    background-color: var(--specialOrange);
+}
+
+/* .hearth:hover {
+    transition: all 0.3s;
+    background-color: var(--specialOrange);
+} */
+
+.light-button {
+    position: absolute;
+    font-size: 0.9rem;
+    width: 13rem;
+    bottom: 2%;
+    right: 10%;
+    background-color: #fff;
+    visibility: hidden;
+}
+
+.card-prod:hover .light-button {
+    animation-name: button;
+    animation-duration: 0.5s;
+    visibility: visible;
+}
+
+@keyframes button {
+    from {
+        bottom: 0; 
+        opacity: 0;
+    }
+
+    to {
+        bottom: 2%; 
+        opacity: 1;
+    }
+}
+
+.light-button:hover {
+    transition: all 0.3s;
+    color: var(--specialOrange);
 }

@@ -6,11 +6,22 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { FaRegHeart } from 'react-icons/fa'
+import { FaHeart } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
+import { BsArrowsFullscreen } from 'react-icons/bs'
+import { BsFillBrightnessHighFill } from 'react-icons/bs'
+import Button from 'react-bootstrap/Button';
 import './ProductCard.css'
 import '../index.css'
 
 const ProductCard = () => {
-    const [product, setProduct] = useState()
+    const [product, setProduct] = useState();
+    const [isActive, setActive] = useState(false);
+
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -35,16 +46,22 @@ const ProductCard = () => {
             <Row className='product-row justify-content-center align-items-center'>
                 {product?.homefurniture.map((x) => (
                     <Col xl={3} className='card-prod'>
-                        <CardGroup className='card-gr'>                      
-                                <div className='img-product-1'><Card.Img variant="top" src={x.images} className='img-prod' /></div>
-                                <Card.Body className='mt-4'>
-                                    <Card.Title className='hover-effect text-center'><h6>{x.name}</h6></Card.Title>
-                                    <Card.Text>
+                        <CardGroup className='card-gr'>
+                            <div className='img-product-1'><Card.Img variant="top" src={x.images} className='img-prod' />
+                                <Button className='light-button' variant="light"><FaShoppingCart className='mr-5' /> Add to card</Button>{' '}
+                            </div>
+                            <Card.Body className='mt-4'>
+                                <Card.Title className='hover-effect text-center'><h6>{x.name}</h6></Card.Title>
+                                <Card.Text>
                                     <h6 className='hover-effect text-center'>{x.price}</h6>
-                                    </Card.Text>
-                                </Card.Body>
+                                </Card.Text>
+                            </Card.Body>
                         </CardGroup>
-                        <div className='hearth fs-5'><FaRegHeart /></div>
+                        <div onClick={toggleClass} className={`hearth fs-5 ${isActive ? "outline" : "filled"}` }></div>
+                        <div className='right-icons'>
+                            <div className='icn'><BsArrowsFullscreen /></div>
+                            <div className='icn'><BsFillBrightnessHighFill/></div>
+                        </div>
                     </Col>
                 ))}
             </Row>

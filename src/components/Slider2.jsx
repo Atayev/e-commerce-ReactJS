@@ -8,6 +8,8 @@ import lounge from '../assets/img/lounge.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container } from 'react-bootstrap'
 import 'swiper/css';
+
+
 const Slider2 = () => {
   const objects = {
     "Bedroom": bedroom,
