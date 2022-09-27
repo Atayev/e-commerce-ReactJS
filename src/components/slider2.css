@@ -82,8 +82,8 @@
   }
 
 .swiper-slide {
-    width: 100px!important;
-    height: 100px!important;
+    width: 150px!important;
+    height: 150px!important;
     text-align: center;
     font-size: 1em;
     background: #fff;
@@ -95,8 +95,8 @@
     border-radius: 50%;
   }
   .swiper-slide>img {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   .swiper-slide:hover {
@@ -104,8 +104,8 @@
   }
  .swiper-slide::before{
     content: '';
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: none;
     border: 2px dashed var(--specialOrange);

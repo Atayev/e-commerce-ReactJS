@@ -118,3 +118,29 @@ li:hover{
 .information > ul > li {
   font-size: .9em;
 }
+
+.about {
+  background: #f4f5f8;
+  width: 100vw;
+}
+.aboutTitle {
+  position: relative;
+  color: rgb(71, 71, 71);
+  font-weight: 500;
+}
+
+.aboutTitle:hover {
+  color:var(--specialOrange)
+}
+
+.aboutTitle2 {
+  font:700 2em "Raleway" ;
+  color: rgb(33, 33, 33);
+}
+.bg-white {
+  background: white;
+}
+
+.aboutImage {
+  height: 60%;
+}
