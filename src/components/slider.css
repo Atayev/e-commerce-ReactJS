@@ -1,8 +1,11 @@
+
 .bg-slider{
     background-color: var(--slider);
   }
 
-
+  .chair{
+    float: right;
+  }
  @media(max-width: 800px) {
     .chairsl{
         width: 250px;
@@ -10,3 +13,26 @@
         margin-left: 30px;
     }
   }
+  .bg-warning{
+    border-color: orange;
+    background-color: orange!important;
+  }
+
+  .bg-btn {
+    background-color: var(--specialOrange);
+    color: white;
+    font: 16px 'Raleway' sans-serif;
+    border-radius: 0;
+    line-height: 1;
+    border: none;
+    transition: all 0.4s ease 0s;
+    padding: 17px 36px;
+  }
+  .bg-btn:hover {
+    background-color: black;
+    color: var(--specialOrange);
+    border:none;
+  }
+
+  
+                      

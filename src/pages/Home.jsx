@@ -1,4 +1,5 @@
 import React from 'react'
+import LatestNews from '../components/LatestNews'
 import OurProducts from '../components/OurProducts'
 import ProductCard from '../components/ProductCard'
 import Slider from '../components/Slider'
@@ -10,6 +11,7 @@ const Home = () => {
       <Slider />
       <Slider2 />
       <ProductCard />
+      <LatestNews/>
     </div>
   )
 }
