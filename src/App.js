@@ -6,7 +6,11 @@ import StickyModal from './components/StickyModal';
 import About from './pages/About'
 import Slider from './components/Slider';
 import Footer from './components/Footer';
+
 import {Routes,Route} from 'react-router-dom'
+
+import ProductCard from './components/ProductCard';
+
 import OurProducts from './components/OurProducts';
 
 
@@ -15,17 +19,17 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
+
       <Routes>
         <Route path='/about' element={<About />} />
       </Routes>
       
-
-      {/* <Slider />
-      <Slider2 />
-
-      <OurProducts/>
-      
-      <StickyModal /> */}
+    {/* <Slider />
+  <Slider />
+      <Slider2 /> */}
+      <StickyModal />
+      <ProductCard/>
+      <StickyModal /> 
       <Footer />
     </BrowserRouter>
   );
