@@ -19,18 +19,6 @@ const Slider2 = () => {
   }
  
   const obj = Object.entries(objects)
-<<<<<<< HEAD
-  return (
-    <div className='container-fluid d-flex justify-content-center'>
-      <div className='row'>
-        {
-          obj.map((it) => (
-            <Link to='/categories' className='circle-product col-2 p-5 d-flex justify-content-center align-items-center flex-column text-decoration-none'>
-              <img src={it[1]} alt='ddc' />
-              <span className='p-3'>{ it[0] }</span>
-            </Link>
-=======
->>>>>>> 4cbdf950daf4850db009a54ee7f2fa7265e71754
 
   return (
    
