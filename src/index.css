@@ -118,3 +118,19 @@ li:hover{
 .information > ul > li {
   font-size: .9em;
 }
+
+
+.l-news {
+  color: white;
+  font: 16px 'Raleway' sans-serif;
+  border-radius: 0;
+  line-height: 1;
+  border: none;
+  transition: all 0.4s ease 0s;
+  font-weight: 500px;
+}
+.l-news:hover {
+  background-color: var(--specialOrange);
+  color: white;
+  border:none;
+}

@@ -9,6 +9,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 import { useEffect,useState } from 'react'
 
+
+
 const Header = () => {
   const [nav, setNav] = useState()
   const [state, setState] = useState([])
@@ -35,9 +37,11 @@ const Header = () => {
           <span className='searchIcon mx-2 px-2 fs-3'>
             <FaSistrix />
           </span>
+          
           <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
             <FiUser />
-          </span>
+          </span> 
+          
           <span className='cartIcon mx-2  px-2 fs-3'>
             <BsHandbag />
           </span>
