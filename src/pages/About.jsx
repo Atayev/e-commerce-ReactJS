@@ -23,11 +23,11 @@ const About = () => {
             <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> About </Link>
           </Breadcrumb>
       </div>
-      <div className='aboutSection bg-white px-5 mx-3 py-5 my-5eeeeeeee'>
-          <p className='text-justify aboutTitle2'>Furns is a global furniture destination for somethings. We sell cutting-edge furniture and offer a wide variety of fashion-related content.</p>
+      <div className='aboutSection bg-white px-2 mx-2 py-5 my-5'>
+          <p className='text-justify aboutTitle2  px-5'>Furns is a global furniture destination for somethings. We sell cutting-edge furniture and offer a wide variety of fashion-related content.</p>
           <div className='d-md-flex'>
           {data?.map((item) => (
-            <Card className='aboutCard col-md-6 mx-1 mb-2 border-0'>
+            <Card className='aboutCard col-md-6 mb-2 border-0'>
             <Card.Img variant="top" className='aboutImage my-3 px-3' src={item?.image} />
             <Card.Body>
                 <Card.Title className='fw-bold text-uppercase'>{ item?.title }</Card.Title>

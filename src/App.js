@@ -6,7 +6,7 @@ import StickyModal from './components/StickyModal';
 import About from './pages/About'
 import Slider from './components/Slider';
 import Footer from './components/Footer';
-
+import {Routes,Route} from 'react-router-dom'
 import OurProducts from './components/OurProducts';
 
 
@@ -15,7 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <About />
+      <Routes>
+        <Route path='/about' element={<About />} />
+      </Routes>
+      
+
       {/* <Slider />
       <Slider2 />
 
