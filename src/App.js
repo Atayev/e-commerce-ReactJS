@@ -8,7 +8,7 @@ import Slider from './components/Slider';
 import Footer from './components/Footer';
 import ProductCard from './components/ProductCard';
 import OurProducts from './components/OurProducts';
-
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -16,10 +16,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Slider />
-      <Slider2 />
-      <StickyModal />
-      <ProductCard/>
-      <StickyModal /> 
+     <Contact/>
       <Footer />
     </BrowserRouter>
   );
