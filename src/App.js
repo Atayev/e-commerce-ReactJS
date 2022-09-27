@@ -12,6 +12,7 @@ import {Routes,Route} from 'react-router-dom'
 import ProductCard from './components/ProductCard';
 
 import OurProducts from './components/OurProducts';
+import Home from './pages/Home';
 
 
 
@@ -19,17 +20,11 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-
       <Routes>
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
       </Routes>
-      
-    {/* <Slider />
-  <Slider />
-      <Slider2 /> */}
       <StickyModal />
-      <ProductCard/>
-      <StickyModal /> 
       <Footer />
     </BrowserRouter>
   );
