@@ -2,7 +2,8 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
-import {FaTelegramPlane} from 'react-icons/fa'
+import { FaTelegramPlane } from 'react-icons/fa'
+import paymentMethods from '../assets/img/paymentMethods.png'
 const Footer = () => {
 
   const [menus,setMenus]=useState()
@@ -63,7 +64,17 @@ const Footer = () => {
             </button>
           </div>
         </div>
+        
       </Container>
+      <div className="secondFooter">
+        <Container className='d-flex justify-content-between py-2'>
+          <p className='text-white'>@2021 FUNS. Made with love by ...</p>
+          <div className='paymentMethods'>
+            <img src={paymentMethods} alt="" />
+          </div>
+          </Container>
+      </div>
+      
     </div>
   )
 }

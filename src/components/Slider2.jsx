@@ -25,12 +25,13 @@ const Slider2 = () => {
    <Container>
       <Swiper
         className="mySwiper"
-        spaceBetween={20}
+        spaceBetween={100}
         slidesPerView={4}
+        loop
       >
           {
           obj.map((it) => (
-            <SwiperSlide className='col-2 m-auto d-flex justify-content-center flex-column text-decoration-none roundedImage'>
+            <SwiperSlide className='col-4 m-3 d-flex justify-content-center flex-column text-decoration-none roundedImage'>
                   <img src={it[1]} alt='ddc' className='' />
                   <span className='p-3'>{it[0]}</span>
               </SwiperSlide>)

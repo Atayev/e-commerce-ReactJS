@@ -16,6 +16,7 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 .header {
   background: white;
@@ -123,6 +124,10 @@ li:hover{
   background: #f4f5f8;
   width: 100vw;
 }
+.aboutUs > p {
+  font-size: .9em;
+}
+
 .aboutTitle {
   position: relative;
   color: rgb(71, 71, 71);
@@ -143,4 +148,12 @@ li:hover{
 
 .aboutImage {
   height: 60%;
+}
+
+.secondFooter {
+  width: 100vw;
+  background: var(--footer2);
+}
+.secondFooter >div> p {
+  font-size: .8em;
 }
