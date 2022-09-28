@@ -1,0 +1,9 @@
+.wish{
+    background-color: var(--slider);
+    text-align: center;
+}
+
+.fa-bag-shopping{
+    color: var(--specialOrange);
+    font-size: 32px;
+}

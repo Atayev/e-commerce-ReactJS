@@ -19,34 +19,35 @@ const Product = ({ id, images, name, price, category }) => {
 
         addToCart(
             {
-              id: id,
+              cart:{id: id,
               images: images,
               name: name,
               price: price,
-              category:category
+              category:category}
             }
         )
-    )
+      )
+      console.log('added')
 }
-  return (
-                  <Col xl={3} className='card-prod'>
-                        <CardGroup className='card-gr'>
-                            <div className='img-product-1'><Card.Img variant="top" src={images} className='img-prod' />
-                                <Button className='light-button' variant="light" onClick={()=>addTo()}><FaShoppingCart className='mr-5' /> Add to card</Button>{' '}
-                            </div>
-                            <Card.Body className='mt-4'>
-                                <Card.Title className='hover-effect text-center'><p>{category}</p></Card.Title>
-                                <Card.Title className='hover-effect text-center'><h6>{name}</h6></Card.Title>
-                                <Card.Text>
-                                    <h6 className='hover-effect text-center'>{price}</h6>
-                                </Card.Text>
-                            </Card.Body>
-                        </CardGroup>
-                        <div className='right-icons'>
-                            <div className='icn'><BsArrowsFullscreen /></div>
-                            <div className='icn'><BsFillBrightnessHighFill/></div>
-                        </div>
-                    </Col>
+    return (
+        <Col xl={3} className='card-prod'>
+            <CardGroup className='card-gr' id={id}>
+                <div className='img-product-1'><Card.Img variant="top" src={images} className='img-prod' />
+                    <Button className='light-button' variant="light" onClick={()=>addTo()}><FaShoppingCart className='mr-5' /> Add to card</Button>{' '}
+                </div>
+                <Card.Body className='mt-4'>
+                    <Card.Title className='hover-effect text-center'><p>{category}</p></Card.Title>
+                    <Card.Title className='hover-effect text-center'><h6>{name}</h6></Card.Title>
+                    <Card.Text>
+                        <h6 className='hover-effect text-center'>{price}</h6>
+                    </Card.Text>
+                </Card.Body>
+            </CardGroup>
+            <div className='right-icons'>
+                <div className='icn'><BsArrowsFullscreen /></div>
+                <div className='icn'><BsFillBrightnessHighFill/></div>
+            </div>
+        </Col>
   )
 }
 
