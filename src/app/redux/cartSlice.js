@@ -19,8 +19,7 @@ export const cartSlice = createSlice({
                 price:action.payload.cart.price,
                 images:action.payload.cart.images,
             }
-            state.cart.push(cartItem)
-            console.log(state.cart)
+                state.cart.push(cartItem)
         }
         
     }

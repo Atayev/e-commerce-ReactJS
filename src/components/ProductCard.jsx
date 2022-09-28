@@ -31,7 +31,6 @@ const ProductCard = ({}) => {
         }
         fetchData()
     }, [])
-    console.log(product)
     
     return (
         <Container fluid>
@@ -45,12 +44,12 @@ const ProductCard = ({}) => {
             <Row className='product-row justify-content-center align-items-center'>
 
                 {product?.homefurniture.map((x) => (
-                    <Product
-                        id = {x?.id}
-                        images={x?.images} 
-                        name= {x?.name}
-                        price={x?.price} 
-                        category={x?.category}
+                        <Product
+                            id = {x?.id}
+                            images={x?.images} 
+                            name= {x?.name}
+                            price={x?.price} 
+                            category={x?.category}
                     />
                 ))}
             </Row>

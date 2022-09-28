@@ -10,23 +10,25 @@ import {Link} from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 
+
+
 const Header = () => {
 
-  const cart = useSelector(state => state.cart)
-  console.log(cart.cart)
-  
-  const [nav, setNav] = useState()
-  const [state, setState] = useState([])
 
+  const reduxState = useSelector( state=>state.cart )
+ 
+  const [nav, setNav] = useState()
+  const [states, setStates] = useState([])
+  
   useEffect(() => {
     const fetchData = async() => {
       const response = await fetch('../data.json')
       const data =  await response.json()
       setNav(data?.menu)
-      setState(Object.entries(nav[0]))
+      setStates(Object.entries(nav[0]))
     }
     fetchData()
-  }, [nav, setState])
+  }, [nav, setStates])
 
   
   return (
@@ -40,14 +42,17 @@ const Header = () => {
           <span className='searchIcon mx-2 px-2 fs-3'>
             <FaSistrix />
           </span>
+          
           <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
             <FiUser />
-          </span>
-          <span className='cartIcon mx-2  px-2 fs-3'>
-              <BsHandbag />
-              
+          </span> 
+          
+            <Link to='/cart'>
+            <span className='cartIcon mx-2  px-2 fs-3'>
+              <BsHandbag />   
             </span>
-            <span className='text-dark'>{cart?.cart?.length}</span>
+            <span className='text-dark'>{reduxState?.cart?.length}</span>
+            </Link>
         </div>
       </div>
         </Container>
@@ -58,7 +63,7 @@ const Header = () => {
               <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="m-auto menuItem">
                       {
-                        state?.map((item,key) => (
+                        states?.map((item,key) => (
                           <Link key={key} to={`${item[0]}`} className='text-decoration-none px-1 mx-3'>{item[1]}</Link>
                         ))
                 }

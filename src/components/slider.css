@@ -1,6 +1,8 @@
 
 .bg-slider{
     background-color: var(--slider);
+    min-height: 800px;
+    width: 100%;
   }
 
   .chair{
@@ -11,6 +13,7 @@
         width: 250px;
         height: 250px;
         margin-left: 30px;
+        flex-direction: column;
     }
   }
   .bg-warning{
@@ -33,6 +36,46 @@
     color: var(--specialOrange);
     border:none;
   }
+
+  .title{
+    font-size: 24px;
+    line-height: 1;
+    color: rgb(71, 71, 71);
+    font-weight: 600;
+  }
+  .name{
+    font-size: 72px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .slidertext{
+    margin-bottom: 100px;
+    text-align: left;
+  }
+
+  .imageslider {
+    
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+  }
+  .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+  
+    padding-top: 0px important!;
+    padding-bottom: 1.25rem;
+    color: #fff;
+   
+  }
+ 
+  
+  
+  
 
   
                       
