@@ -8,15 +8,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 
 const Header = () => {
-
-
   const reduxState = useSelector( state=>state.cart )
- 
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
   
@@ -42,12 +39,11 @@ const Header = () => {
           <span className='searchIcon mx-2 px-2 fs-3'>
             <FaSistrix />
           </span>
-          
           <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
             <FiUser />
           </span> 
           
-            <Link to='/cart'>
+            <Link to='/cart' className='text-decoration-none text-dark'>
             <span className='cartIcon mx-2  px-2 fs-3'>
               <BsHandbag />   
             </span>

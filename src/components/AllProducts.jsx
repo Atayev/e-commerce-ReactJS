@@ -5,31 +5,32 @@ import Row from 'react-bootstrap/Row'
 import './ProductCard.css'
 import '../index.css'
 import Product from '../pages/Product'
-const ProductCard = () => {
-    const [product, setProduct] = useState();
+const AllProducts = () => {
+    const [products, setProducts] = useState();
     
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch('../data.json')
             const data = await response.json()
-
-            setProduct(data?.products)
+            setProducts((Object.values(data?.products))
+                .filter((x) => Array.isArray(x))
+                .flat()
+            )
         }
         fetchData()
     }, [])
+    
     return (
         <Container fluid>
             <Row>
-                <h1 className='text-center'>Our Products</h1>
+                <h1 className='text-center my-3'>Our Products</h1>
             </Row>
             <Row>
                 <h6 className='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore</h6>
             </Row>
-
             <Row className='product-row justify-content-center align-items-center'>
-
-                {product?.officefurniture.map((x) => (
+                {products?.map((x) => (
                         <Product
                             id = {x?.id}
                             images={x?.images} 
@@ -43,4 +44,4 @@ const ProductCard = () => {
     )
 }
 
-export default ProductCard
+export default AllProducts

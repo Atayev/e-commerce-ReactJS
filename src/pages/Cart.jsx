@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { Link } from 'react-router-dom'
-import { useSelector,useDispatch } from 'react-redux/es/exports'
-import CartProduct from '../components/CartProduct'
+import { useSelector} from 'react-redux/es/exports'
+import CartItem from '../components/CartItem'
+import Subtotal from '../components/Subtotal'
 
 const Cart = () => {
   const data = useSelector(state => state.cart)
-  console.log(data.cart)
   return (
     <div className='cart'>
       <div className='cartTitle'>
@@ -14,22 +14,24 @@ const Cart = () => {
       <div className='text-center mb-3  py-3 d-flex justify-content-center '>
         <Breadcrumb>
           <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}
-            <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> About </Link>
+            <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Cart </Link>
           </Breadcrumb>
       </div>
       </div>
       
-      <div className='d-flex'>
-        {data?.cart.map((element) => (
-          <CartProduct
+      <div className='mx-5'>
+        {data?.cart.length > 0 ? (data?.cart.map((element) => (
+          <CartItem
             id={element?.id}
             category={element?.category}
             name={element?.name}
             images={element?.images}
             price={element?.price}
           />
-        ))}
+        ))) : (<p className='text-center fs-4'>There is nothing in your cart.</p>)
         
+        } 
+        <Subtotal />
       </div>
     </div>
   )

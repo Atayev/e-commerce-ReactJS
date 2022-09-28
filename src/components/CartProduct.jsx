@@ -1,7 +1,6 @@
 import React from 'react'
 import {BiEdit} from 'react-icons/bi'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux'
 import {removeFromCart} from '../app/redux/cartSlice'
