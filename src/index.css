@@ -180,3 +180,9 @@ li:hover{
   background: #ebebeb;  
   height: 75px;
 }
+
+.imageCustom>img {
+  width: 150px;
+  height: 150px;
+  
+}

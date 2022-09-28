@@ -18,6 +18,7 @@ import ProductCard from './components/ProductCard';
 import OurProducts from './components/OurProducts';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import CartProduct from './components/CartProduct';
 
 
 
@@ -31,9 +32,11 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/contact' element={<Contact />} />
+        
       </Routes>
       <StickyModal />
       <Footer />
+      <CartProduct />
     </BrowserRouter>
   );
 }

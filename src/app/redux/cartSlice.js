@@ -20,11 +20,16 @@ export const cartSlice = createSlice({
                 images:action.payload.cart.images,
             }
                 state.cart.push(cartItem)
-        }
+        },
+        removeFromCart: (state, action) => {
+            let index=state.cart.findIndex(item=> item.id===action.payload.id)
+            state.basket.splice(index,1)
+        },
+
         
     }
     
 })
 
-export const {addToCart} = cartSlice.actions
+export const {addToCart,removeFromCart} = cartSlice.actions
 export default cartSlice.reducer
