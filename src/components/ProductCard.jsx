@@ -13,15 +13,14 @@ import { BsFillBrightnessHighFill } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
 import './ProductCard.css'
 import '../index.css'
-
-const ProductCard = () => {
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../app/redux/cartSlice'
+import Product from '../pages/Product'
+const ProductCard = ({}) => {
     const [product, setProduct] = useState();
     const [isActive, setActive] = useState(false);
-
-    const toggleClass = () => {
-        setActive(!isActive);
-    };
-
+    const dispatch = useDispatch()
+    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,7 +32,7 @@ const ProductCard = () => {
         fetchData()
     }, [])
     console.log(product)
-
+    
     return (
         <Container fluid>
             <Row>
@@ -44,25 +43,15 @@ const ProductCard = () => {
             </Row>
 
             <Row className='product-row justify-content-center align-items-center'>
+
                 {product?.homefurniture.map((x) => (
-                    <Col xl={3} className='card-prod'>
-                        <CardGroup className='card-gr'>
-                            <div className='img-product-1'><Card.Img variant="top" src={x.images} className='img-prod' />
-                                <Button className='light-button' variant="light"><FaShoppingCart className='mr-5' /> Add to card</Button>{' '}
-                            </div>
-                            <Card.Body className='mt-4'>
-                                <Card.Title className='hover-effect text-center'><h6>{x.name}</h6></Card.Title>
-                                <Card.Text>
-                                    <h6 className='hover-effect text-center'>{x.price}</h6>
-                                </Card.Text>
-                            </Card.Body>
-                        </CardGroup>
-                        <div onClick={toggleClass} className={`hearth fs-5 ${isActive ? "outline" : "filled"}` }></div>
-                        <div className='right-icons'>
-                            <div className='icn'><BsArrowsFullscreen /></div>
-                            <div className='icn'><BsFillBrightnessHighFill/></div>
-                        </div>
-                    </Col>
+                    <Product
+                        id = {x?.id}
+                        images={x?.images} 
+                        name= {x?.name}
+                        price={x?.price} 
+                        category={x?.category}
+                    />
                 ))}
             </Row>
         </Container>

@@ -5,6 +5,7 @@ import '../index.css'
 
 
 const StickyModal = () => {
+    
     return (
         <div className='basket d-flex flex-column align-items-center justify-content-center'>
             <div className='basketlogo'><FiShoppingBag /></div>

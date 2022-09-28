@@ -7,9 +7,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useSelector,useDispatch } from 'react-redux';
 
 const Header = () => {
+
+  const cart = useSelector(state => state.cart)
+  console.log(cart.cart)
+  
   const [nav, setNav] = useState()
   const [state, setState] = useState([])
 
@@ -39,8 +44,10 @@ const Header = () => {
             <FiUser />
           </span>
           <span className='cartIcon mx-2  px-2 fs-3'>
-            <BsHandbag />
-          </span>
+              <BsHandbag />
+              
+            </span>
+            <span className='text-dark'>{cart?.cart?.length}</span>
         </div>
       </div>
         </Container>
