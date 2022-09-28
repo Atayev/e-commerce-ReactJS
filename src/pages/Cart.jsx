@@ -41,13 +41,13 @@ const Cart = () => {
             </tr>
           </thead>
             {
-            Array(data?.cart).map((tr) => (
+            Array(data?.cart[0]).map((tr) => (
               <tr>
-                <td><img src={tr?.images } alt="" /></td>
-                <td className='px-5'>{tr?.name }</td>
-                <td className='px-5'>{tr?.price }</td>
-                <td className='px-5'>{tr?.price }</td>
-                <td className='px-5'>{tr?.price }</td>
+                <td><img src={ tr?.images } alt="" /></td>
+                <td className='mx-2'>{ tr?.name }</td>
+                <td className='mx-2 px-4'>{ tr?.price }</td>
+                <td className='mx-2'>{ tr?.price }</td>
+                <td className='mx-2'>{ tr?.price }</td>
                 <td className='px-5 fs-5'>
                   <BiEdit className='mx-2'/>
                   <AiOutlineCloseCircle />

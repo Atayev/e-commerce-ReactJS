@@ -19,11 +19,13 @@ const Product = ({ id, images, name, price, category }) => {
 
         addToCart(
             {
-              cart:{id: id,
-              images: images,
-              name: name,
-              price: price,
-              category:category}
+                cart: {
+                    id: id,
+                    images: images,
+                    name: name,
+                    price: price,
+                    category: category
+                }
             }
         )
       )
