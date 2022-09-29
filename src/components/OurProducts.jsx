@@ -24,4 +24,4 @@ const OurProducts = () => {
     )
 }
 
-export default OurProducts
+export default OurProducts;

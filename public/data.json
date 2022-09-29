@@ -21,6 +21,8 @@
             "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor."
         }
     ],
+
+    "user" :[ "Signin", "Cart", "Wishlist", "Compare" ],
     "latestnews" : [
         {
             "image":"https://i.ibb.co/z2WpTqx/news1.jpg",
@@ -204,4 +206,6 @@
     "cart" : {
         "tableHead":["IMAGE","PRODUCT NAME","UNTIL PRICE","QTY","SUBTOTAL","ACTION"]
     }
+
+
 }

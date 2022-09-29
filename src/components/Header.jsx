@@ -9,6 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux';
+import User from '../pages/user'
 
 
 
@@ -19,7 +20,7 @@ const Header = () => {
  
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
-  
+  const [show, setShow] = useState(false);
   useEffect(() => {
     const fetchData = async() => {
       const response = await fetch('../data.json')
@@ -43,7 +44,9 @@ const Header = () => {
             <FaSistrix />
           </span>
           
-          <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
+          <span className='loginIcon mx-2 px-2 border-end border-start fs-3' onClick={() => setShow(currentShow => !currentShow)}>
+            <box-icon name='user' color="blue" size="md"/>
+              { show ? <User/> : null }
             <FiUser />
           </span> 
           
