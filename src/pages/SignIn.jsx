@@ -19,12 +19,12 @@ const SignIn = () => {
       <div className="box col-lg-6 my-5 text-center">
         <form>
             <div>
-                <label id="email" className="label ">Email *</label>
-                <input type="email" id="email" name="email" label="Email *" value="customer@customer.com" className="label1"/>
+                <span className="label ">Email *</span>
+                <input type="email" name="email" placeholder="customer@customer.com" className="label1"/>
             </div>
             <div>
-                <label id="password" className="label mt-3">Password *</label>
-                <input type="password" id="password" name="epassword" label="password *" value="customer123" className="label1"/>
+                <span className="label mt-3">Password *</span>
+                <input type="password" name="password" placeholder="customer123" className="label1"/>
             </div>
             <div>
                 <button type="submit" className="button w-100 mt-3">Signin</button>
