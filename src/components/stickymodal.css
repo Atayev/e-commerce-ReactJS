@@ -1,5 +1,5 @@
 .basket{
-   right: 0px;
+    right: 0px;
     margin: 0px;
     padding: 15px;
     display: flex;
@@ -17,6 +17,7 @@
     font-weight: 600;
     cursor: pointer;
 }
+
 .basket > svg {
     color: var(--specialOrange);
 }

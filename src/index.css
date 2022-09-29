@@ -185,16 +185,20 @@ li:hover{
 .imageCustom>img {
   width: 200px;
   height: 200px;
+  transition: all 0.4s ease 0s;
 }
 
+
 .subtotal {
-  border: 1px solid var(--specialOrange);
+  background-color: var(--slider);
+  /* border: 1px solid var(--specialOrange); */
 }
+
 .bg-delete {
-  background: rgba(255, 40, 2, 0.904);
+  background: var(--specialOrange);
   color: white;
   font: 1.1 'Raleway' sans-serif;
-  border-radius: 0;
+  border-radius: 4px;
   line-height: 1;
   border: none;
   transition: all 0.4s ease 0s;
@@ -206,4 +210,53 @@ li:hover{
 
 .tableHead {
   background: #ebebeb;
+}
+.bg-proceed {
+  background-color: #474747;
+  color: white;
+  font: 1.1 'Raleway' sans-serif;
+  border-radius: 4px;
+  line-height: 1;
+  border: none;
+  transition: all 0.4s ease 0s;
+  padding: 17px 36px;
+}
+.bg-proceed:hover {
+  background-color: var(--specialOrange);
+  color: white;
+  border:none;
+}
+.carts{
+  border: 0.5px solid grey;
+  margin-left: 10%; 
+  border-radius: 3px; 
+  transition: all 0.4s ease 0s; 
+}
+.carts:hover{
+  background-color: var(--slider);
+}
+.textcenter{
+  margin-left: 50%;
+}
+
+
+.modalLink{
+  color: #fff;
+}
+.modalButton{
+   background-color: var(--specialOrange);
+   border: 1px solid var(--specialOrange);
+   width: 4rem;
+   height: 3rem;
+}
+.modalInput{
+  height: 3rem;
+}
+.modalButton:hover{
+  background-color: var(--specialOrange);
+  border: 1px solid var(--specialOrange);
+}
+
+.modalButton:hover .modalLink{
+  color: #fff;
 }

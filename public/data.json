@@ -21,6 +21,8 @@
             "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor."
         }
     ],
+
+    "user" :["Signin", "Cart",  "Wishlist", "Compare" ],
     "latestnews" : [
         {
             "image":"https://i.ibb.co/z2WpTqx/news1.jpg",
@@ -191,5 +193,8 @@
             "description":"Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor."
         }
     ],
+
         "tableHeads":["IMAGE","PRODUCT NAME","UNTIL PRICE","ADD TO CART","ACTION"]
-}
+    }
+
+

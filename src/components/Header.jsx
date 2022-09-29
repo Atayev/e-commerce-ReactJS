@@ -6,69 +6,67 @@ import { BsHandbag } from 'react-icons/bs'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
-
-
+import { useSelector,useDispatch } from 'react-redux';
 
 const Header = () => {
-  const reduxState = useSelector( state=>state.cart )
+  const reduxState = useSelector(state => state.cart)
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
-  
+ 
   useEffect(() => {
-    const fetchData = async() => {
+    const fetchData = async () => {
       const response = await fetch('../data.json')
-      const data =  await response.json()
+      const data = await response.json()
       setNav(data?.menu)
       setStates(Object.entries(nav[0]))
     }
     fetchData()
   }, [nav, setStates])
 
-  
+
+
   return (
     <div className='header'>
       <Container>
-      <div className='d-flex justify-content-between py-5'>
-        <div className='logo'>
-          <img src={logo} alt="Furns - Furniture" />
-        </div>
-        <div className='icons'>
-          <span className='searchIcon mx-2 px-2 fs-3'>
-            <FaSistrix />
-          </span>
-          <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
-            <FiUser />
-          </span> 
-          
-            <Link to='/cart' className='text-decoration-none text-dark'>
-            <span className='cartIcon mx-2  px-2 fs-3'>
-              <BsHandbag />   
+          <div className='d-flex justify-content-between py-md-5'>
+          <div className='logo'>
+            <img src={logo} alt="Furns - Furniture" />
+          </div>
+          <div className='icons'>
+            <span  className='searchIcon mx-md-2 px-md-2 fs-3'>
+              <FaSistrix />
             </span>
-            <span className='text-dark'>{reduxState?.cart?.length}</span>
-            </Link>
+            <span className='loginIcon mx-md-2 px-md-2 fs-3'>
+              <FiUser />
+            </span>
+            <Link to='/cart' className='text-decoration-none text-dark'>
+                <span className='cartIconmx-md-2 px-md-2 fs-3'>
+                  <BsHandbag />
+                </span>
+                <span className='text-dark'>{reduxState?.cart?.length}</span>
+              </Link>
+            </div>
         </div>
-      </div>
         </Container>
       <div className='nav'>
-          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='nav text-white text-center'>
+        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='nav text-white text-center'>
           <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="m-auto menuItem">
-                      {
-                        states?.map((item,key) => (
-                          <Link key={key} to={`${item[0]}`} className='text-decoration-none px-1 mx-3'>{item[1]}</Link>
-                        ))
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="m-auto menuItem">
+                {
+                  states?.map((item, key) => (
+                    <Link key={key} to={`${item[0]}`} className='text-decoration-none px-1 mx-3'>{item[1]}</Link>
+                  ))
                 }
-                </Nav>
-              </Navbar.Collapse>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
-      </Navbar>
-        </div>
-    </div> 
+        </Navbar>
+      </div>
+    </div>
   )
 }
 

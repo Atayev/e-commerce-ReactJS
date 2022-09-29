@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
-import { addToCart, addToWishList } from '../app/redux/cartSlice';
+import { addToCart, addToWishList, removeFromList } from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsTrash,BsHeart,BsArrowsFullscreen } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
@@ -62,9 +62,9 @@ const Product = ({ id, images, name, price, category,availability }) => {
                     </Card.Text>
                 </Card.Body>
             </CardGroup>
+            <div className='icn'onClick={() =>!isActive ?  addWishlist() : removeFromList()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn' onClick={() => addWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
-                <div className='icn'><BsArrowsFullscreen /></div>
+                <div className='icn1'><BsArrowsFullscreen /></div>
             </div>
         </Col>
   )

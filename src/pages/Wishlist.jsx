@@ -46,6 +46,7 @@ const Wishlist = () => {
     )
   }
   return (
+
     <div className="wish">
       <p className='py-5 fs-1'>Wishlist</p>
       <div className='container'>
@@ -81,6 +82,7 @@ const Wishlist = () => {
           </table>
       </div>
     </div>
+
   )
 }
 

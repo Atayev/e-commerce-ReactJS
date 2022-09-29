@@ -10,12 +10,10 @@
     
 }
 
-
 .product-row {
     row-gap: 4rem;
     margin-top: 3rem;
 }
-
 
 
 .img-prod:hover {
@@ -41,10 +39,9 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-    top: 2%;
-    right: 6%;
+    top: 15%;
+    right: 12.5%;
     visibility: hidden;
- 
 }
 @keyframes example {
     from {
@@ -53,7 +50,7 @@
     }
 
     to {
-        top: 14%;
+        top: 15%;
         opacity: 1;
     }
 }
@@ -72,6 +69,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icn{
+    position: absolute;
+    z-index: 4445;
+    top: 3%;
+    right: 8%;
 }
 
 .icn>svg:hover {
