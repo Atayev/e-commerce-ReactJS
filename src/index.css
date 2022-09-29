@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
+
 .header {
   background: white;
   width: 100vw;
@@ -47,7 +48,7 @@ body {
 .bg-btn {
   background-color: var(--specialOrange);
   color: white;
-  font: 16px 'Raleway' sans-serif;
+  font: 1.1 'Raleway' sans-serif;
   border-radius: 0;
   line-height: 1;
   border: none;
@@ -179,4 +180,26 @@ li:hover{
 .cartTable {
   background: #ebebeb;  
   height: 75px;
+}
+
+.imageCustom>img {
+  width: 200px;
+  height: 200px;
+}
+
+.subtotal {
+  border: 1px solid var(--specialOrange);
+}
+.bg-delete {
+  background: rgba(255, 40, 2, 0.904);
+  color: white;
+  font: 1.1 'Raleway' sans-serif;
+  border-radius: 0;
+  line-height: 1;
+  border: none;
+  transition: all 0.4s ease 0s;
+  padding: 17px 36px;
+}
+.bg-delete:hover {
+  background: #2f333a;
 }

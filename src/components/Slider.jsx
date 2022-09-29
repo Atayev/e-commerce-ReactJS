@@ -6,26 +6,17 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 const Slider = () => {
-
-  const [slider, setSlider] = useState()
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('../data.json')
-      const data = await response.json()
-
-      console.log(data.slider[0]);
-      setSlider(data?.slider)
-
-    }
+    const [slider, setSlider] = useState()
+    useEffect(() => {
+      const fetchData = async () => {
+        const response = await fetch('../data.json')
+        const data = await response.json()
+        setSlider(data?.slider)
+      }
     fetchData()
   }, [])
-
-  console.log(slider);
-
-
-
   return (
-    <Carousel className="py-5 bg-slider">
+    <Carousel className="bg-slider mb-4">
       {slider?.map((item, key) => (
         <Carousel.Item>
           <div className="row justify-content-between karusel ">
@@ -38,21 +29,15 @@ const Slider = () => {
                 <p className="fs-5 textsize">{item?.description}</p>
                 <Button variant=" mt-3" className="bg-btn">Read More</Button>
                 </div>
-
               </Carousel.Caption>
             </div>
             <div className="col-sm-6 col-md-5 col-lg-6 my-5 imageslider m-auto my-5">
-
               <img
                 classname="image"
                 src={item?.link}
                 alt="First slide"
               />
-
-          </div>
-
-
-          
+            </div>
           </div>
         </Carousel.Item>
 

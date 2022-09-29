@@ -14,10 +14,7 @@ import User from '../pages/user'
 
 
 const Header = () => {
-
-
   const reduxState = useSelector( state=>state.cart )
- 
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
   const [show, setShow] = useState(false);
@@ -50,7 +47,7 @@ const Header = () => {
             <FiUser />
           </span> 
           
-            <Link to='/cart'>
+            <Link to='/cart' className='text-decoration-none text-dark'>
             <span className='cartIcon mx-2  px-2 fs-3'>
               <BsHandbag />   
             </span>
