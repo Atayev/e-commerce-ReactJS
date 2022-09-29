@@ -21,13 +21,13 @@ const Slider = () => {
         <Carousel.Item>
           <div className="row justify-content-between karusel ">
           
-           <div className="mx-0 col-sm-6 col-md-5 col-lg-6 "   >
+           <div className="my-5 m-auto my-5 col-sm-6 col-md-5 col-lg-6 "   >
               <Carousel.Caption className=' text-dark mr-5 carousel-caption  slidertext' style={{width: '30rem',}} >
                 <div className="justify-content-start text-right m-auto mx-auto">
                 <h3 className="title">{item?.title}</h3>
                 <h1 className="name">{item?.name}</h1>
                 <p className="fs-5 textsize">{item?.description}</p>
-                <Button variant=" mt-3" className="bg-btn">Read More</Button>
+                <Button variant=" mt-3" className="bg-btn but-sl">Read More</Button>
                 </div>
               </Carousel.Caption>
             </div>

@@ -16,18 +16,21 @@ const User = () => {
     },[])
     
   return (
-    <div className="user">
-        <Col>
-        <ul>
+    
+        <Col className="user">
+        <ul className="eJwAVN show">
         {user?.map((item,key)=> (
                     <li>
                         <a href="#" className="align-items-center">{item}</a>
+                        <hr/>
                     </li>
                    
+                   
         ))}
+           
         </ul> 
           </Col>
-    </div>
+    
   )
 }
 

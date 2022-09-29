@@ -39,8 +39,9 @@
   }
 
   .slidertext{
-    margin-top: 150px;
+    
     text-align: left;
+    margin-bottom: 150px;
   }
   
   .imageslider {
@@ -88,12 +89,20 @@
   .title{
     font-size: 18px;
   }
+  .textsize{
+    display: none;
+  }
   .slidertext{
     position: absolute;
     top: 80%;
     left: 20%;
     width: 100%;
     height: 100%;
+  }
+  .but-sl{
+    display: block;
+    width: 90px;
+    height: 40px;
   }
   .imageslider{
     position: relative; 

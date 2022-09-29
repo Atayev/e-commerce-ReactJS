@@ -1,7 +1,11 @@
 .user{
     width: 80px;
     height: 100px;
-    border: none;
+    border: 1px solid white;
+    position: absolute;
+    margin-top: 2px;
+    z-index: 2;
+   
 }
 ul {
     display: block;
@@ -17,5 +21,35 @@ ul {
 a{
   text-decoration: none;
   color: grey;
-  font-size: 20px;
+  font-size: 12px;
+}
+hr{
+  margin: 0%;
+  width: 60px;
+}
+.eJwAVN{
+  margin: 0px;
+  top: 45px;
+  opacity: 0;
+  z-index: 9;
+  border: none;
+  padding: 10px 10px;
+  min-width: 130px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  transition: all 0.4s ease 0s;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 6%) 0px 3px 25.5px 4.5px;
+  right: 0px;
+  left: 80%;
+  transform: translateX(-50%);
+}
+
+
+.eJwAVN.show {
+  top: 2px;
+  opacity: 1;
+  pointer-events: visible;
 }
