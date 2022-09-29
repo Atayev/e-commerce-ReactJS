@@ -22,7 +22,7 @@
         }
     ],
 
-    "user" :[ "Signin", "Cart", "Wishlist", "Compare" ],
+    "user" :["Signin", "Cart",  "Wishlist", "Compare" ],
     "latestnews" : [
         {
             "image":"https://i.ibb.co/z2WpTqx/news1.jpg",
