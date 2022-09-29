@@ -8,19 +8,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import { useSelector } from 'react-redux';
 
 
 
 const Header = () => {
-
-  const [lgShow, setLgShow] = useState(false);
-  const reduxState = useSelector(state => state.cart)
-
+  const reduxState = useSelector( state=>state.cart )
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
   useEffect(() => {
@@ -38,13 +31,21 @@ const Header = () => {
   return (
     <div className='header'>
       <Container>
-        <div className='d-flex justify-content-between py-5'>
-          <div className='logo'>
-            <img src={logo} alt="Furns - Furniture" />
-          </div>
-          <div className='icons'>
-            <span onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2 fs-3'>
-              <FaSistrix />
+      <div className='d-flex justify-content-between py-5'>
+        <div className='logo'>
+          <img src={logo} alt="Furns - Furniture" />
+        </div>
+        <div className='icons'>
+          <span className='searchIcon mx-2 px-2 fs-3'>
+            <FaSistrix />
+          </span>
+          <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
+            <FiUser />
+          </span> 
+          
+            <Link to='/cart' className='text-decoration-none text-dark'>
+            <span className='cartIcon mx-2  px-2 fs-3'>
+              <BsHandbag />   
             </span>
             <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
               <FiUser />

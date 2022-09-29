@@ -15,6 +15,7 @@
     font-family: "Open Sans";
     background-color: rgb(47, 51, 58);
     font-weight: 600;
+    cursor: pointer;
 }
 .basket > svg {
     color: var(--specialOrange);

@@ -1,60 +1,27 @@
 
 .bg-slider{
     background-color: var(--slider);
-    min-height: 800px;
-    width: 100%;
-  }
-
-  .chair{
-    float: right;
-  }
- @media(max-width: 800px) {
-    .chairsl{
-        width: 250px;
-        height: 250px;
-        margin-left: 30px;
-        flex-direction: column;
-    }
-  }
-  .bg-warning{
-    border-color: orange;
-    background-color: orange!important;
-  }
-
-  .bg-btn {
-    background-color: var(--specialOrange);
-    color: white;
-    font: 16px 'Raleway' sans-serif;
-    border-radius: 0;
-    line-height: 1;
-    border: none;
-    transition: all 0.4s ease 0s;
-    padding: 17px 36px;
-  }
-  .bg-btn:hover {
-    background-color: black;
-    color: var(--specialOrange);
-    border:none;
+    min-height: 600px;
+    width: 100vw;
   }
 
   .title{
-    font-size: 24px;
+    font-size: 1.5em;
     line-height: 1;
-    color: rgb(71, 71, 71);
+    color: var(--specialOrange);
     font-weight: 600;
   }
   .name{
-    font-size: 72px;
-    margin-bottom: 10px;
+    font-size: 2em;
     font-weight: 700;
   }
+
   .slidertext{
-    margin-bottom: 100px;
+    margin-top: 150px;
     text-align: left;
   }
 
   .imageslider {
-    
     right: 15%;
     bottom: 1.25rem;
     left: 15%;
@@ -66,11 +33,13 @@
     position: absolute;
     right: 15%;
     bottom: 1.25rem;
-  
-    padding-top: 0px important!;
     padding-bottom: 1.25rem;
-    color: #fff;
-   
+  }
+
+  @media only screen and (max-width: 600px) {
+    .description {
+      display: none;
+    }
   }
  
   

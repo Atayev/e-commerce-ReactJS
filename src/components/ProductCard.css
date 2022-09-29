@@ -7,9 +7,8 @@
     cursor: pointer;
     overflow: hidden;
     position: relative;
- 
+    
 }
-
 
 
 .product-row {
@@ -17,10 +16,7 @@
     margin-top: 3rem;
 }
 
-.card-gr {
-    width: 100%;
-    height: 25rem;
-}
+
 
 .img-prod:hover {
     transform: rotate(15deg);
@@ -31,6 +27,7 @@
     background-color: #f1f1f1;
     box-sizing: border-box;
     position: relative;
+    border: 1px solid var(--specialOrange);
 }
 
 .hover-effect:hover {
@@ -39,38 +36,15 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.hearth {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2%;
-    right: 6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.filled{
-    background-image: url('../assets/img/heart-filled.svg');
-}
-.outline{
-    background-image: url('../assets/img/heart-outline.svg');
-}
-
 .right-icons {
     position: absolute;
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-    top: 14%;
+    top: 2%;
     right: 6%;
     visibility: hidden;
  
-   
 }
 @keyframes example {
     from {
@@ -100,15 +74,10 @@
     align-items: center;
 }
 
-.icn:hover {
+.icn>svg:hover {
     transition: all 0.3s;
-    background-color: var(--specialOrange);
+    color: var(--specialOrange);
 }
-
-/* .hearth:hover {
-    transition: all 0.3s;
-    background-color: var(--specialOrange);
-} */
 
 .light-button {
     position: absolute;

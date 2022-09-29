@@ -49,106 +49,92 @@
         "homefurniture":[
             {
                 "id":"1",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
                 "name":"Comfortable sofa",
-                "price": "288$",
+                "price": "288",
                 "images":["https://i.ibb.co/6FyQJt1/sofa.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             },
             {
                 "id":"2",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
-                "name":"Josefa Queen Size Bed with..",
-                "price": "290$",
+                "name":"Josefa Queen Size Bed",
+                "price": "290",
                 "images":["https://i.ibb.co/bW8c6qp/75-2.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             },
             {
                 "id":"3",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
-                "name":"MINIMALIST MID-CENTURY MO..",
-                "price": "220$",
+                "name":"Minimalist mid century sofa",
+                "price": "220",
                 "images":["https://i.ibb.co/ZdV8G6W/75-3.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             },
             {
                 "id":"5",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
                 "name":"Round Dining Table without Chair",
-                "price": "210$",
+                "price": "210",
                 "images":["https://i.ibb.co/5nXyv9r/75-4.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             },
             {
                 "id":"5",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
                 "name":"Twist Dining Table",
-                "price": "250$",
+                "price": "250",
                 "images":["https://i.ibb.co/5nXyv9r/75-4.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"6",
-                "category":"homefurniture",
+                "category":"Home furniture",
                 "availability":"9",
                 "name":"Bedroom Exclusive Mattress",
-                "price": "222$",
+                "price": "222",
                 "images":["https://i.ibb.co/jvX551V/75-8.jpg"],
-                "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
-            } ,
-            {
-                "id":"7",
-                "category":"hospitalfurniture",
-                "availability":"9",
-                "name":"Hospital Reception Table",
-                "price": "269$",
-                "images":["https://i.ibb.co/K9JSW9C/75-6.jpg"],
-                "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
-            }, 
-            {
-                "id":"8",
-                "category":"hospitalfurniture",
-                "availability":"9",
-                "name":"Simple Hospital Manual Patient Bed",
-                "price": "231$",
-                "images":["https://i.ibb.co/Gdw2G5q/75-14.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }
         ],
         "hospitalfurniture": [
             {
                 "id":"7",
-                "category":"hospitalfurniture",
+                "category":"Hospital furniture",
                 "availability":"9",
                 "name":"Hospital Reception Table",
+                "price":"2300",
                 "images":["https://i.ibb.co/K9JSW9C/75-6.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"8",
-                "category":"hospitalfurniture",
-                "availability":"9",
-                "name":"Simple Hospital Manual Patient Bed",
+                "category":"Hospital furniture",
+                "availability":"2",
+                "price":"3400",
+                "name":"Simple Hospital Patient Bed",
                 "images":["https://i.ibb.co/Gdw2G5q/75-14.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"9",
-                "category":"hospitalfurniture",
+                "category":"Hospital furniture",
                 "availability":"9",
+                "price":"2544",
                 "name":"Hospital bed Tranquil",
                 "images":["https://i.ibb.co/cJ3YcSV/75-15.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"10",
-                "category":"hospitalfurniture",
+                "category":"Hospital furniture",
                 "availability":"9",
+                "price":"3500",
                 "name":"Surgery Bed",
                 "images":["https://i.ibb.co/0G9Lkpy/75-16.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
@@ -157,32 +143,36 @@
         "officefurniture" : [
             {
                 "id":"11",
-                "category":"officefurniture",
+                "category":"Office furniture",
                 "availability":"9",
+                "price":"350",
                 "name":"Developer Chair",
                 "images":["https://i.ibb.co/wJ3jwBL/75-11.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"12",
-                "category":"officefurniture",
+                "category":"Office furniture",
                 "availability":"9",
+                "price":"252",
                 "name":"Grey Scandinavian Chair",
                 "images":["https://i.ibb.co/YB2jrXJ/75-12.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"13",
-                "category":"officefurniture",
+                "category":"Office furniture",
                 "availability":"9",
+                "price":"125",
                 "name":"Optima High Back Chair",
                 "images":["https://i.ibb.co/XCpwm5M/75-13.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"
             }, 
             {
                 "id":"14",
-                "category":"officefurniture",
+                "category":"Office furniture",
                 "availability":"9",
+                "price":"855",
                 "name":"High Back Lounge Office Chairs",
                 "images":["https://i.ibb.co/xznV2kn/75-7.jpg"],
                 "description":"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humor, or randomized words which don't look even slightly believable. If you are going to use a passage of"

@@ -1,18 +1,17 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
-import { BsArrowsFullscreen } from 'react-icons/bs'
-import { BsFillBrightnessHighFill } from 'react-icons/bs'
+import { BsTrash,BsHeart,BsArrowsFullscreen } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
 
-const Product = ({ id, images, name, price, category }) => {
+const Product = ({ id, images, name, price, category,availability }) => {
 
-  const dispatch = useDispatch()
-
+    const dispatch = useDispatch()
+    const [isActive,setActive] = useState(false)
 
   const addTo = () => {
     dispatch(
@@ -24,7 +23,8 @@ const Product = ({ id, images, name, price, category }) => {
                     images: images,
                     name: name,
                     price: price,
-                    category: category
+                    category: category,
+                    availability:availability
                 }
             }
         )
@@ -35,19 +35,19 @@ const Product = ({ id, images, name, price, category }) => {
         <Col xl={3} className='card-prod'>
             <CardGroup className='card-gr' id={id}>
                 <div className='img-product-1'><Card.Img variant="top" src={images} className='img-prod' />
-                    <Button className='light-button' variant="light" onClick={()=>addTo()}><FaShoppingCart className='mr-5' /> Add to card</Button>{' '}
+                    <Button className='light-button' variant="light" onClick={()=>addTo()}><FaShoppingCart className='mr-5' /> Add to cart</Button>{' '}
                 </div>
-                <Card.Body className='mt-4'>
-                    <Card.Title className='hover-effect text-center'><p>{category}</p></Card.Title>
-                    <Card.Title className='hover-effect text-center'><h6>{name}</h6></Card.Title>
+                <Card.Body className='mt-3'>
+                    <Card.Title className='hover-effect text-center'><p className='fs-6'>{category}</p></Card.Title>
+                    <Card.Title className='hover-effect text-center'><h6 className='fw-bold'>{name}</h6></Card.Title>
                     <Card.Text>
-                        <h6 className='hover-effect text-center'>{price}</h6>
+                        <h6 className='hover-effect text-center'>{price} $</h6>
                     </Card.Text>
                 </Card.Body>
             </CardGroup>
             <div className='right-icons'>
+                <div className='icn' onClick={() => setActive(!isActive)}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
                 <div className='icn'><BsArrowsFullscreen /></div>
-                <div className='icn'><BsFillBrightnessHighFill/></div>
             </div>
         </Col>
   )
