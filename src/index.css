@@ -21,6 +21,7 @@ body {
 .header {
   background: white;
   width: 100vw;
+  position: relative;
 }
 .nav {
   width: 100vw;
@@ -179,4 +180,17 @@ li:hover{
 .cartTable {
   background: #ebebeb;  
   height: 75px;
+}
+
+.myModal{
+  width: 100%;
+}
+.modalButton{
+  background-color: var(--specialOrange);
+}
+.modalButton:hover{
+  background-color: var(--specialOrange);
+}
+.modalLink{
+  color: #f1f1f1;
 }
