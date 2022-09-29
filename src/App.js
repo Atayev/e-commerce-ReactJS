@@ -14,13 +14,11 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Slider/>
       <Routes>
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/contact' element={<Contact />} />
-        
       </Routes>
       <StickyModal />
       <Footer />

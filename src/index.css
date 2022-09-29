@@ -204,3 +204,25 @@ li:hover{
 .bg-delete:hover {
   background: #2f333a;
 }
+
+.modalLink{
+  color: #fff;
+}
+.modalButton{
+   background-color: var(--specialOrange);
+   border: 1px solid var(--specialOrange);
+   width: 4rem;
+   height: 3rem;
+}
+.modalInput{
+  height: 3rem;
+}
+.modalButton:hover{
+  background-color: var(--specialOrange);
+  border: 1px solid var(--specialOrange);
+}
+
+.modalButton:hover .modalLink{
+  color: #fff;
+}
+

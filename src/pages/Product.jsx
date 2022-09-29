@@ -45,9 +45,9 @@ const Product = ({ id, images, name, price, category,availability }) => {
                     </Card.Text>
                 </Card.Body>
             </CardGroup>
+            <div className='icn' onClick={() => setActive(!isActive)}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn' onClick={() => setActive(!isActive)}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
-                <div className='icn'><BsArrowsFullscreen /></div>
+                <div className='icn1'><BsArrowsFullscreen /></div>
             </div>
         </Col>
   )
