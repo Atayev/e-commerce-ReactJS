@@ -191,7 +191,5 @@
             "description":"Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor."
         }
     ],
-    "cart" : {
-        "tableHead":["IMAGE","PRODUCT NAME","UNTIL PRICE","QTY","SUBTOTAL","ACTION"]
-    }
+        "tableHeads":["IMAGE","PRODUCT NAME","UNTIL PRICE","ADD TO CART","ACTION"]
 }

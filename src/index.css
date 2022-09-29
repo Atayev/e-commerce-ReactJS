@@ -203,3 +203,7 @@ li:hover{
 .bg-delete:hover {
   background: #2f333a;
 }
+
+.tableHead {
+  background: #ebebeb;
+}
