@@ -11,7 +11,7 @@ import '../index.css'
 
 const Contact = () => {
   return (
-    <Container fluid className='mb-5'>
+    <Container fluid className='mb-5 w-100'>
       <div className='breadcrump'>
         <h1>CONTACT</h1>
         <Breadcrumb>

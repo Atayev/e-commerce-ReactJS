@@ -1,7 +1,7 @@
 .breadcrump{
     background-color: #f1f1f1;
     width: 100% !important;
-    height: 50vh;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,3 +82,15 @@ form{
     transition: all 0.3s;
 }
 
+
+@media(max-width: 425px){
+    .info{
+        height: 40vh !important;
+    }
+    .inputs{
+        width: 100% !important;
+    }
+    input{
+       width: 100% !important;
+    }
+}
