@@ -19,26 +19,20 @@ const Cart = () => {
       </div>
       </div>
      
-      <div className="d-flex">
-        <div className='mx-5  py-5 px-5 col-7'>
+      <div className="row">
+        <div className='col-md-5'>
           {data?.cart.length > 0 ? (data?.cart.map((element) => (
             <CartItem
-              
               id={element?.id}
               category={element?.category}
               name={element?.name}
               images={element?.images}
               price={element?.price}
-              
             />
           ))) : (<p className='text-center fs-4'>There is nothing in your cart.</p>)
-          
           } 
-          
         </div>
-        <div className="col-4 mx-5  py-5 px-5">
           <Subtotal />
-        </div>
         </div>
     </div>
   )

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './wishlist.css';
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import { useSelector,useDispatch } from 'react-redux';
-import { addToCart,removeFromList } from '../app/redux/cartSlice';
+import { addToCart, removeFromList } from '../app/redux/cartSlice';
+
 const Wishlist = () => { 
   const [table, setTable] = useState()
+  const [wishes,setWishes] = useState([])
   const state = useSelector(state => state.cart)
   const dispatch= useDispatch()
   useEffect(() => {
@@ -15,25 +17,25 @@ const Wishlist = () => {
     }
     fetchData()
   }, [])
-  const addTo = () => {
+  const addTo = (wish) => {
+    setWishes(wish)
     dispatch(
-
-        addToCart(
-            {
-                cart: {
-                    id: state.wishList.id,
-                    images: state.wishList.images,
-                    name: state.wishList.name,
-                    price: state.wishList.price,
-                    category: state.wishList.category,
-                    availability:state.wishList.availability
-                }
-            }
-        )
+      addToCart(
+        {
+          cart: {
+            id: wishes.id,
+            name: wishes.name,
+            images: wishes.images,
+            price:wishes.price
+            
+          }
+        }
       )
-      console.log('added')
+    )
   }
-  
+  console.log(wishes)
+
+  console.log(wishes)
   const removeFrom = () => {
     dispatch(
       removeFromList(
@@ -50,7 +52,7 @@ const Wishlist = () => {
     <div className="wish">
       <p className='py-5 fs-1'>Wishlist</p>
       <div className='container'>
-      <table className='m-auto'>
+      <table className='m-auto '>
           <thead>
             <tr className='tableHead'>
               {table?.map((th) => (
@@ -60,7 +62,7 @@ const Wishlist = () => {
                 ))}
             </tr>
               {state?.wishList.map((wish) => (
-            <tr>
+              <tr>
                 <td>
                  <img src={wish.images} alt="" />
                   </td>
@@ -71,7 +73,7 @@ const Wishlist = () => {
                  {wish.price}$
                   </td>
                   <td>
-                    <button className='bg-btn' onClick={()=>addTo()}>Add to Cart</button>
+                    <button className='bg-btn' onClick={()=>addTo(wish)}>Add to Cart</button>
                   </td>
                   <td>
                     <AiOutlineCloseCircle onClick={()=>removeFrom()}/>

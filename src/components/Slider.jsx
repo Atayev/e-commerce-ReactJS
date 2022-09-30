@@ -19,19 +19,18 @@ const Slider = () => {
     <Carousel className="bg-slider mb-4">
       {slider?.map((item, key) => (
         <Carousel.Item>
-          <div className="row justify-content-between karusel ">
-          
-           <div className="my-5 m-auto my-5 col-sm-6 col-md-5 col-lg-6 "   >
-              <Carousel.Caption className=' text-dark mr-5 carousel-caption  slidertext' style={{width: '30rem',}} >
-                <div className="justify-content-start text-right m-auto mx-auto">
+          <div className="row ">
+           <div className=" col-sm-6 col-md-5 col-lg-6 "   >
+              <Carousel.Caption className='d-flex justify-content-start align-items-top text-dark carousel-caption  slidertext mb-5' style={{width: '30rem',}} >
+                <div className="text-left">
                 <h3 className="title">{item?.title}</h3>
-                <h1 className="name">{item?.name}</h1>
+                <h1 className="name " >{item?.name}</h1>
                 <p className="fs-5 textsize">{item?.description}</p>
-                <Button variant=" mt-3" className="bg-btn but-sl">Read More</Button>
+                <Button variant="" className="bg-btn2 but-sl">Read More</Button>
                 </div>
               </Carousel.Caption>
             </div>
-            <div className="col-sm-6 col-md-5 col-lg-6 my-5 imageslider m-auto my-5">
+            <div className="col-sm-4 col-md-5 col-lg-6 imageslider">
               <img
                 classname="image"
                 src={item?.link}

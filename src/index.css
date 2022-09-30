@@ -55,7 +55,22 @@ body {
   transition: all 0.4s ease 0s;
   padding: 17px 36px;
 }
+.bg-btn2 {
+  background-color: var(--specialOrange);
+  color: white;
+  font: 1.1 'Raleway' sans-serif;
+  border-radius: 0;
+  line-height: 1;
+  border: none;
+  transition: all 0.4s ease 0s;
+  padding: 17px 36px;
+}
 .bg-btn:hover {
+  background-color: #474747;
+  color: var(--specialOrange);
+  border:none;
+}
+.bg-btn2:hover {
   background-color: #474747;
   color: var(--specialOrange);
   border:none;
@@ -227,9 +242,7 @@ li:hover{
   border:none;
 }
 .carts{
-  border: 0.5px solid grey;
-  margin-left: 10%; 
-  border-radius: 3px; 
+  width: 100vw;
   transition: all 0.4s ease 0s; 
 }
 .carts:hover{

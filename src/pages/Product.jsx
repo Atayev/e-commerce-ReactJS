@@ -27,8 +27,19 @@ const Product = ({ id, images, name, price, category,availability }) => {
                     }
                 }
             )
-            
         )
+    }
+    const removeWishlist = () => {
+        setActive(!isActive)
+        dispatch(
+            removeFromList(
+              {
+                  wishList: {
+                      id:id
+                  }
+              }
+          )
+          )
     }
   const addTo = () => {
     dispatch(
@@ -62,7 +73,7 @@ const Product = ({ id, images, name, price, category,availability }) => {
                     </Card.Text>
                 </Card.Body>
             </CardGroup>
-            <div className='icn'onClick={() =>!isActive ?  addWishlist() : removeFromList()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
+            <div className='icn'onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
                 <div className='icn1'><BsArrowsFullscreen /></div>
             </div>

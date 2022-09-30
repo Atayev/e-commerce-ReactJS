@@ -1,74 +1,67 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { Link } from 'react-router-dom'
 import './contact.css'
 import '../index.css'
-
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 const Contact = () => {
   return (
-    <Container fluid className='mb-5'>
+    <div>
       <div className='breadcrump'>
-        <h1>CONTACT</h1>
-        <Breadcrumb>
-          <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}
-          <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Contact </Link>
-        </Breadcrumb>
+      <h1>CONTACT</h1>
+      <Breadcrumb>
+        <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}
+        <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Contact </Link>
+      </Breadcrumb>
       </div>
-      <Container className='mt-4'>
-        <iframe style={{ width: "100%" }} height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=quba&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-      </Container>
+      <Container className='my-2'>
+      <iframe title='iframe' style={{ width: "100%" }} height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=quba&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      
+        <div className='d-md-flex justify-content-center my-md-5 mx-1'>
+          <div className='infoSection d-flex flex-column'>
+            <p className='fs-3 text-center'>
+              Contact Info
+            </p>
+            <p><span><b>Phone:</b>+994555555555</span></p>
+            <p><span><b>Email:</b>bootstrap@mail.ru</span></p>
+            <p><span><b>Adress:</b>Baku,Azerbaijan</span></p>
+        </div>
+        <div className='formSection text-center'></div>
+          <Form className='contactForm mx-md-3'>
+          <p className='  fs-3'>Get in touch</p>
+            <Form.Group>
+              <Form.Label>First Name</Form.Label>
+              <Form.Control type="text" placeholder="First name.." />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control type="text" placeholder="Last Name .." />
+              </Form.Group>
+              <Form.Group className='mb-2'>
+              <Form.Label>Subject</Form.Label>
+              <Form.Control type="text" placeholder="Subject here.." />
+              </Form.Group>
+              <FloatingLabel controlId="txt2" label="Message">
+                <Form.Control
+                  className='mb-2'
+                  as="textarea"
+                  placeholder="Your Message"
+                  style={{ height: '100px' }}
+                />
+              </FloatingLabel>
 
-      <Container>
-        <Row className='header-contain'>
-          <Col xl={4} className='info'>
-            <span className='mt-5 fs-3 text-start head'>Contact info</span>
-            <span className='cont-info'><span className='fs-5'>Phone:</span><span className='text-dark h-7'>+994555555555</span></span>
-            <span className='cont-info'><span className='fs-5'>Email:</span> <span className='text-dark fs-6'>bootstrap@mail.ru</span></span>
-            <span className='cont-info'><span span className='fs-5'>Adress:</span><span className='text-dark fs-6'>Baku city</span></span>
-          </Col>
-
-          <Col className='inputs' xl={7}>
-            <Row className='mt-5 fs-3 text-start head'>Get in Touch</Row>
-            <form>
-              <Row className='row1'>
-                <Col>
-                  <label for='name'>First name</label>
-                  <input type='text' id='name' />
-                </Col>
-                <Col>
-                  <label for='last'>Last name</label>
-                  <input type='text' id='last' />
-                </Col>
-              </Row>
-
-              <Row className='row2'>
-                <Col>
-                  <label for='subject'>Subject</label>
-                  <input type='text' id='subject' />
-                </Col>
-              </Row>
-
-              <Row className='row3'>
-                <Col>
-                  <label for='message'>Message</label>
-                  <input type='text' id='message' />
-                </Col>
-              </Row>
-              <Row className='row4'>
-                <Col>
-                  <button type='submit'>SEND MESSAGE</button>
-                </Col>
-              </Row>
-            </form>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+              <Button className='bg-btn' type="submit">
+                Send Message
+              </Button>
+          </Form>
+          </div>
+        </Container>
+    </div>
+    
   )
 }
 

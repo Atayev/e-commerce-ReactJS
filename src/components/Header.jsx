@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
   const reduxState = useSelector(state => state.cart)
@@ -30,19 +30,19 @@ const Header = () => {
   return (
     <div className='header'>
       <Container>
-          <div className='d-flex justify-content-between py-md-5'>
-          <div className='logo'>
+          <div className='d-flex justify-content-around py-md-5'>
+          <div className='logo my-4'>
             <img src={logo} alt="Furns - Furniture" />
           </div>
-          <div className='icons'>
-            <span  className='searchIcon mx-md-2 px-md-2 fs-3'>
+          <div className='icons my-4'>
+            <span  className='searchIcon mx-2 px-2  fs-3'>
               <FaSistrix />
             </span>
-            <span className='loginIcon mx-md-2 px-md-2 fs-3'>
+            <span className='loginIcon mx-2 px-2 fs-3'>
               <FiUser />
             </span>
             <Link to='/cart' className='text-decoration-none text-dark'>
-                <span className='cartIconmx-md-2 px-md-2 fs-3'>
+                <span className='cartIcon mx-2 px-2 fs-3'>
                   <BsHandbag />
                 </span>
                 <span className='text-dark'>{reduxState?.cart?.length}</span>
