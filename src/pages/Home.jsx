@@ -11,7 +11,7 @@ const Home = () => {
       <Slider />
       <Slider2 />
       <AllProducts />
-      <LatestNews/>
+      <LatestNews />
     </div>
   )
 }

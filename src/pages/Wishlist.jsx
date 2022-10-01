@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import './wishlist.css';
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import { useSelector,useDispatch } from 'react-redux';
 import { addToCart, removeFromList } from '../app/redux/cartSlice';
 
 const Wishlist = () => { 
   const [table, setTable] = useState()
-  const [wishes,setWishes] = useState([])
+  const [wishes,setWishes] = useState({})
   const state = useSelector(state => state.cart)
   const dispatch= useDispatch()
   useEffect(() => {
@@ -19,33 +18,27 @@ const Wishlist = () => {
   }, [])
   const addTo = (wish) => {
     setWishes(wish)
-    dispatch(
-      addToCart(
-        {
+   if( wishes ) { dispatch( addToCart(
+      {
           cart: {
-            id: wishes.id,
-            name: wishes.name,
-            images: wishes.images,
-            price:wishes.price
-            
+            id: wishes?.id,
+            name: wishes?.name,
+            images: wishes?.images,
+            price: wishes?.price,
+            category: wishes?.category,
+            availability:wishes?.availability
           }
         }
-      )
-    )
+      ))}
   }
   console.log(wishes)
 
-  console.log(wishes)
   const removeFrom = () => {
-    dispatch(
-      removeFromList(
+    dispatch(removeFromList(
         {
-            wishList: {
-                id:state.wishList.id
-            }
+            wishList: { id:state.wishList.id }
         }
-    )
-    )
+    ))
   }
   return (
 
@@ -61,7 +54,7 @@ const Wishlist = () => {
                 </th>
                 ))}
             </tr>
-              {state?.wishList.map((wish) => (
+            {state?.wishList.map((wish) => (
               <tr>
                 <td>
                  <img src={wish.images} alt="" />

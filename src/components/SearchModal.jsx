@@ -1,21 +1,44 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect , useState } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { FaSistrix } from 'react-icons/fa'
 import Button from 'react-bootstrap/Button'
 import {  useNavigate,Link } from 'react-router-dom'
-
+import { useDispatch} from 'react-redux'
+import {searchItem} from '../app/redux/cartSlice'
 function SearchModal({ show, showFunc }) {
-    const [product,setProduct] = useState()
-    const navigate = useNavigate()
-    const ref = useRef()
-    
+  const [input,setInput] = useState()
+  const navigate = useNavigate()
+      const dispatch = useDispatch()
+      const [product, setProduct] = useState()
+      const [products, setProducts] = useState()
+       useEffect(() => {
+          const fetchData = async () => {
+          const response = await fetch('../data.json')
+          const data = await response.json()
+          setProducts((Object.values(data?.products))
+              .filter((x) => Array.isArray(x))
+              .flat()
+          )
+      }
+      fetchData()
+      setProduct((products?.filter((prod) => prod.name.toLowerCase().includes(input.toLowerCase()))))
+      // eslint-disable-next-line
+  }, [input])
+  
       const search = () => {
-      console.log(ref.current.value)
+      showFunc(!show)
+      dispatch(
+        searchItem(
+          {
+            search: {product }
+          }
+        )
+      )
       navigate('/search')
-      showFunc(true)
-    } 
+  } 
+  
   return (
     <Modal
     size="lg"
@@ -36,12 +59,13 @@ function SearchModal({ show, showFunc }) {
           placeholder="Enter your search keyword.."
           aria-label=""
           aria-describedby="basic-addon2"
-          className='modalInput'
-          ref={ref}
+            className='modalInput'
+            value={input}
+            onChange={(e)=>setInput(e.target.value)}
                       
         />
-        <Button className='modalButton' id="button-addon2">
-          <Link className='modalLink' to='/search'><FaSistrix onClick={()=>search()}/></Link>
+        <Button className='modalButton' id="button-addon2" onClick={()=>search()}>
+          <Link className='modalLink' to='/search' ><FaSistrix /></Link>
         </Button>
       </InputGroup>
     </Modal.Body>

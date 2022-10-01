@@ -1,9 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import './slider.css';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
-
 
 const Slider = () => {
     const [slider, setSlider] = useState()

@@ -6,7 +6,8 @@ export const getCartTotal = (cart) =>
   
 const initialState = {
     cart: [],
-    wishList:[],
+    wishList: [],
+    search:[]
     }
 export const cartSlice = createSlice({
     name: 'cart',
@@ -44,11 +45,14 @@ export const cartSlice = createSlice({
             let index = state.wishList.findIndex(item => item.id === action.payload.id)
             state.wishList.splice(index, 1)
         },
-            search: (state, action) => {
-                
+            searchItem: (state, action) => {
+                return {
+                    ...state,
+                    search:action.payload.search
+                 }
             }
     }
 })
 
-export const {addToCart,removeFromCart,emptyCart, addToWishList,removeFromList} = cartSlice.actions
+export const {addToCart,removeFromCart,emptyCart, addToWishList,removeFromList,searchItem} = cartSlice.actions
 export default cartSlice.reducer

@@ -14,7 +14,7 @@ function CartProduct({ id, images, name, price, category, availabilitiy }) {
                     category:category,
                     name: name,
                     image: images,
-                    price: JSON.stringify(price),
+                    price: price,
                     }
                 )
             )

@@ -2,8 +2,6 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { Link } from 'react-router-dom'
-import './contact.css'
-import '../index.css'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';

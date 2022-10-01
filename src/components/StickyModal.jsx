@@ -1,7 +1,5 @@
 import React from 'react'
 import { FiShoppingBag } from 'react-icons/fi';
-import './stickymodal.css'
-import '../index.css'
 import { useSelector } from 'react-redux/es/exports'; 
 import { getCartTotal } from '../app/redux/cartSlice';
 import {useNavigate} from 'react-router-dom'
