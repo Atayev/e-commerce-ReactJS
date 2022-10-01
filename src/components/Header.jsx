@@ -9,11 +9,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-
+import SearchModal from './SearchModal'
 const Header = () => {
   const reduxState = useSelector(state => state.cart)
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
+  const [lgShow, setLgShow] = useState(false);
  
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +36,7 @@ const Header = () => {
             <img src={logo} alt="Furns - Furniture" />
           </div>
           <div className='icons my-4'>
-            <span  className='searchIcon mx-2 px-2  fs-3'>
+            <span onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2  fs-3'>
               <FaSistrix />
             </span>
             <span className='loginIcon mx-2 px-2 fs-3'>
@@ -66,6 +67,7 @@ const Header = () => {
           </Container>
         </Navbar>
       </div>
+      <SearchModal show={ lgShow } showFunc={()=>setLgShow(false)} />
     </div>
   )
 }

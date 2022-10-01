@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
+import Search from './components/Search';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/search' element={<Search />} />
       </Routes>
       <StickyModal />
       <Footer />

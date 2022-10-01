@@ -43,7 +43,10 @@ export const cartSlice = createSlice({
         }, removeFromList: (state, action) => {
             let index = state.wishList.findIndex(item => item.id === action.payload.id)
             state.wishList.splice(index, 1)
-        }
+        },
+            search: (state, action) => {
+                
+            }
     }
 })
 
