@@ -5,18 +5,18 @@ import { useDispatch } from 'react-redux'
 import {removeFromCart} from '../app/redux/cartSlice'
 import {  CardGroup } from 'react-bootstrap'
 import { FaTrashAlt } from 'react-icons/fa'
+import {toast} from 'react-toastify'
 const CartItem = ({id,images,name,price,category,availability}) => {
     const dispatch = useDispatch()
     const removeFrom = () => {
         dispatch(
             removeFromCart(
                 {
-                    cart: {
-                        id: id,
-                    }
+                    id: id,
                 }
             )
-        )
+      )
+      toast.warning('Product successfully deleted from your cart')
     }
   return (
             <div className='d-md-flex  my-2 carts'>

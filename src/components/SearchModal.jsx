@@ -32,7 +32,7 @@ function SearchModal({ show, showFunc }) {
       dispatch(
         searchItem(
           {
-            search: {product }
+            search: { product }
           }
         )
       )

@@ -9,6 +9,10 @@
   --footer: #2f333a;
   --footer2: #212121;
 }
+.iconSett {
+  color: var(--specialOrange);
+  font-size: 100px;
+}
 body {
   margin: 0;
   padding: 0;

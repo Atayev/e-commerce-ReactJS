@@ -11,7 +11,8 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
 import Search from './components/Search';
-
+import { ToastContainer,Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
+        <Route path='*' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/cart' element={<Cart />} />
@@ -29,6 +31,18 @@ function App() {
       </Routes>
       <StickyModal />
       <Footer />
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        transition={Flip}
+      />
     </BrowserRouter>
   );
 }

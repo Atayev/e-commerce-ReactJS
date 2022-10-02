@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSelector} from 'react-redux/es/exports'
 import CartItem from '../components/CartItem'
 import Subtotal from '../components/Subtotal'
+import { BiShoppingBag } from 'react-icons/bi'
 
 const Cart = () => {
   const data = useSelector(state => state.cart)
@@ -20,7 +21,7 @@ const Cart = () => {
       </div>
      
       <div className="row">
-        <div className='col-md-5'>
+        <div className='col'>
           {data?.cart.length > 0 ? (data?.cart.map((element) => (
             <CartItem
               id={element?.id}
@@ -29,7 +30,7 @@ const Cart = () => {
               images={element?.images}
               price={element?.price}
             />
-          ))) : (<p className='text-center fs-4'>There is nothing in your cart.</p>)
+          ))) : (<div className='text-center'><BiShoppingBag className='iconSett mt-5 mb-3'/><p className='fs-4'>There are no products in your cart!</p></div>)
           } 
         </div>
           <Subtotal />

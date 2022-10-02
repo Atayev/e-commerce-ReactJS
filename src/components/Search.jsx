@@ -7,7 +7,8 @@ import Row from 'react-bootstrap/Row'
 function Search() {
     const state = useSelector(state => state.cart)
     return (
-        <><div className='search about'>
+        <>
+            <div className='search about'>
             <p className='text-center fs-1 pt-5'>Search</p>
             <div className='text-center mb-3  pb-5 d-flex justify-content-center '>
                 <Breadcrumb>
@@ -15,18 +16,25 @@ function Search() {
                     <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Search </Link>
                 </Breadcrumb>
             </div>
-        </div><Container fluid>
+        </div>
+            <Container fluid>
                 <Row className='product-row justify-content-center align-items-center py-5'>
-                    {state.search.product?.map((prod) => (
-                        <Product
-                            id={prod.id}
-                            name={prod.name}
-                            images={prod.images}
-                            price={prod.price}
-                            category={prod.category} />
-                    ))}
+                    {
+                        state.search ?
+                            state.search.product?.map((prod, key) => (
+                                <Product
+                                    key={key}
+                                    id={prod.id}
+                                    name={prod.name}
+                                    images={prod.images}
+                                    price={prod.price}
+                                    category={prod.category} />
+                                    )) 
+                        : (<p className='text-center fs-4'> No such item or product founded... </p>)
+                }
                 </Row>
-            </Container></>
+            </Container>
+        </>
            
   
   )
