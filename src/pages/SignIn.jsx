@@ -9,6 +9,7 @@ const SignIn = () => {
   //const data = useSelector(state => state.signin)
   return (
     <div>
+        <div className="bg-color">
         <p className='text-dark  text-center fs-1 pt-5'>LOGIN</p>
         <div className='text-center mb-3  py-3 d-flex justify-content-center '>
         <Breadcrumb>
@@ -16,6 +17,7 @@ const SignIn = () => {
             <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'>SIGNIN</Link>
         </Breadcrumb>
       </div>
+        </div>
       <div className="box col-lg-6 my-5 text-center">
         <form>
             <div>

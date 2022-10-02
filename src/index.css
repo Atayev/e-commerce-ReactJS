@@ -212,38 +212,26 @@ li:hover{
 .bg-delete:hover {
   background: #2f333a;
 }
-<<<<<<< HEAD
 
 .tableHead {
   background: #ebebeb;
 }
-=======
-.bg-proceed {
-  background-color: #474747;
-  color: white;
-  font: 1.1 'Raleway' sans-serif;
-  border-radius: 4px;
-  line-height: 1;
-  border: none;
-  transition: all 0.4s ease 0s;
-  padding: 17px 36px;
-}
-.bg-proceed:hover {
-  background-color: var(--specialOrange);
-  color: white;
-  border:none;
-}
-.carts{
-  border: 0.5px solid grey;
-  margin-left: 10%; 
-  border-radius: 3px; 
-  transition: all 0.4s ease 0s; 
-}
-.carts:hover{
+
+.bg-color{
   background-color: var(--slider);
 }
-.textcenter{
-  margin-left: 50%;
-}
 
->>>>>>> eb350a335453906ad665070b8e0d2558b8857b54
+.images-info{
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+.currentpr{
+
+}
+@media(max-width: 600px){
+  .contain{
+    display: flex;
+    flex-direction: column; 
+  }
+}
