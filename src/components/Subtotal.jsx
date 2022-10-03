@@ -1,6 +1,9 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { getCartTotal, emptyCart } from '../app/redux/cartSlice';
+import { useSelector,useDispatch } from 'react-redux'
+import { getCartTotal,emptyCart } from '../app/redux/cartSlice';
+import {toast} from 'react-toastify'
+
+
 
 const Subtotal = () => {
 
@@ -12,6 +15,7 @@ const Subtotal = () => {
         { cart: [] }
       )
     )
+    toast.warning('deleted all products')
   }
   return (
       <div className='subtotal my-2'>

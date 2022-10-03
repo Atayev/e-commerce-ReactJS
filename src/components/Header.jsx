@@ -8,16 +8,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import User from '../pages/user'
-
+import { useSelector } from 'react-redux';
+import SearchModal from './SearchModal'
+import '../index.css'
+import Wishlist from './../pages/Wishlist';
 
 
 const Header = () => {
   const reduxState = useSelector(state => state.cart)
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
-  const [show, setShow] = useState(false);
+  const [lgShow, setLgShow] = useState(false);
+  const [visible, setVisible] = useState(false);
+ 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('../data.json')
@@ -33,27 +36,31 @@ const Header = () => {
   return (
     <div className='header'>
       <Container>
-        <div className='d-flex justify-content-between py-5'>
-          <div className='logo'>
+        <div className='d-flex justify-content-around py-md-5'>
+          <div className='logo my-4'>
             <img src={logo} alt="Furns - Furniture" />
           </div>
-          <div className='icons'>
-            <span className='searchIcon mx-2 px-2 fs-3'>
-              <FaSistrix />
+          <div className='icons ml-5 my-4'>
+            <span onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2  fs-3'>
+              <FaSistrix className='icn-1' />
             </span>
-
-            <span className='loginIcon mx-2 px-2 border-end border-start fs-3' onClick={() => setShow(currentShow => !currentShow)}>
-              <box-icon name='user' color="blue" size="md" />
-              {show ? <User /> : null}
-              <FiUser />
+            <span onClick={() => setVisible(!visible)} className='loginIcon  mx-2 px-2 fs-3'>
+              <FiUser className='icn-1 drop'/>
+              <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>
+                <ul>
+                  <li><Link className='indrop' to='/singin'>Sing in</Link></li>
+                  <li><Link className='indrop' to='/cart'>Cart</Link></li>
+                  <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li>
+                  <li><Link className='indrop' to='/compare'>Compare</Link></li>
+                </ul>
+              </div>
             </span>
-
             <Link to='/cart' className='text-decoration-none text-dark'>
-              <span className='cartIcon mx-2  px-2 fs-3'>
-                <BsHandbag />
+              <span className='cartIcon mx-2 px-2 fs-3'>
+                <BsHandbag className='icn-1' />
               </span>
+              <span className='text-dark'>{reduxState?.cart?.length}</span>
             </Link>
-
           </div>
         </div>
       </Container>
@@ -73,6 +80,7 @@ const Header = () => {
           </Container>
         </Navbar>
       </div>
+      <SearchModal show={lgShow} showFunc={() => setLgShow(false)} />
     </div>
   )
 }

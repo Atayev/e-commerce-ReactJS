@@ -3,7 +3,8 @@ import {BiEdit} from 'react-icons/bi'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux'
-import {removeFromCart} from '../app/redux/cartSlice'
+import { removeFromCart } from '../app/redux/cartSlice'
+import {toast} from 'react-toastify'
 function CartProduct({ id, images, name, price, category, availabilitiy }) {
 
     const dispatch = useDispatch()
@@ -14,10 +15,11 @@ function CartProduct({ id, images, name, price, category, availabilitiy }) {
                     category:category,
                     name: name,
                     image: images,
-                    price: JSON.stringify(price),
+                    price: price,
                     }
                 )
-            )
+        )
+        toast('Product deleted from your cart')
     }
     return (
         

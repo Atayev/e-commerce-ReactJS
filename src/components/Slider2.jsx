@@ -1,6 +1,4 @@
 import React from 'react'
-import './slider2.css'
-import '../index.css'
 import bedroom from '../assets/img/bedroom.png'
 import chair from '../assets/img/chair.png'
 import dinning from '../assets/img/dinning.png'
