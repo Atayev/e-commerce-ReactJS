@@ -19,27 +19,28 @@ const CartItem = ({id,images,name,price,category,availability}) => {
         )
     }
   return (
-            <div className='d-flex'>
-            <CardGroup className='card-gr mb-3 mx-2' id={id}>
+            <div className='d-flex  my-2 carts'>
+            <CardGroup className='card-gr mb-3 mx-2 py-2 ' id={id}>
                  <div className='imageCustom'>
-                    <Card.Img className='' src={images} />
+                    <Card.Img className='pt-3' src={images} />
                 </div>
-                <Card.Body>
+                <Card.Body className="px-3">
                   <Card.Title className='m-2'>
                       <h6 className='fs-4'>{name}</h6>
                       <p>{category}</p>
                   </Card.Title>
-                    <Card.Title className='m-2'></Card.Title>
+                    
                     <Card.Text className='m-2'>
                       <h6>{price} $</h6>
-                      <Button
-                        className='bg-btn'
+                      
+                    </Card.Text>
+                    <Button
+                        className='bg-btn my-3 px-3'
                         variant="dark"
                         onClick={() => removeFrom()}>
                         <FaTrashAlt className='pr-5' />
                         Remove from cart
                     </Button>
-                    </Card.Text>
                 </Card.Body>
             </CardGroup>
          

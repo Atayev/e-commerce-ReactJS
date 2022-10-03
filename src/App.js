@@ -8,6 +8,9 @@ import {Routes,Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import Wishlist from './pages/Wishlist';
+import SignIn from './pages/SignIn';
+
 
 
 function App() {
@@ -19,9 +22,14 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/signin' element={<SignIn />} />
+
+        
       </Routes>
       <StickyModal />
       <Footer />
+      <SignIn/>
     </BrowserRouter>
   );
 }

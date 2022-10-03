@@ -17,6 +17,7 @@
     font-weight: 600;
     cursor: pointer;
 }
+
 .basket > svg {
     color: var(--specialOrange);
 }

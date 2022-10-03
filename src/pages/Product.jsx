@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
-import { addToCart } from '../app/redux/cartSlice';
+import { addToCart, addToWishList } from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsTrash,BsHeart,BsArrowsFullscreen } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
@@ -12,7 +12,24 @@ const Product = ({ id, images, name, price, category,availability }) => {
 
     const dispatch = useDispatch()
     const [isActive,setActive] = useState(false)
-
+    const addWishlist = () => {
+        setActive(!isActive)
+        dispatch(
+            addToWishList(
+                {
+                    wishList: {
+                        id: id,
+                        images: images,
+                        name: name,
+                        price: price,
+                        category: category,
+                        availability:availability
+                    }
+                }
+            )
+            
+        )
+    }
   const addTo = () => {
     dispatch(
 
@@ -47,7 +64,8 @@ const Product = ({ id, images, name, price, category,availability }) => {
             </CardGroup>
             <div className='icn' onClick={() => setActive(!isActive)}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn1'><BsArrowsFullscreen /></div>
+                <div className='icn' onClick={() => addWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
+                <div className='icn'><BsArrowsFullscreen /></div>
             </div>
         </Col>
   )

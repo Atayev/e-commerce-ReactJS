@@ -3,6 +3,7 @@ import { useEffect,useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import paymentMethods from '../assets/img/paymentMethods.png'
 const Footer = () => {
 
@@ -50,7 +51,7 @@ const Footer = () => {
           <ul>
             {
                 menus?.myaccount.map((menu) => (
-                <li className='list-group-item px-2 py-1'>{ menu }</li>
+               <Link to={'/wishlist'} className='text-decoration-none text-white'> <li className='list-group-item px-2 py-1'>{ menu }</li> </Link>
               ))
               }
           </ul>

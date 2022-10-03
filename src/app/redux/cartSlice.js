@@ -5,7 +5,8 @@ export const getCartTotal = (cart) =>
     cart?.reduce((amount, item) => Number(item.price) + amount, 0);
   
 const initialState = {
-    cart :[],
+    cart: [],
+    wishList:[],
     }
 export const cartSlice = createSlice({
     name: 'cart',
@@ -30,9 +31,21 @@ export const cartSlice = createSlice({
                 ...state,
                 cart:action.payload.cart
             }
+        },
+        addToWishList: (state=initialState, action) => {
+            const wishItem = {
+                id:action.payload.wishList.id,
+                images: action.payload.wishList.images,
+                name: action.payload.wishList.name,
+                price:action.payload.wishList.price
+            }
+            state.wishList.push(wishItem)
+        }, removeFromList: (state, action) => {
+            let index = state.wishList.findIndex(item => item.id === action.payload.id)
+            state.wishList.splice(index, 1)
         }
     }
 })
 
-export const {addToCart,removeFromCart,emptyCart} = cartSlice.actions
+export const {addToCart,removeFromCart,emptyCart, addToWishList,removeFromList} = cartSlice.actions
 export default cartSlice.reducer

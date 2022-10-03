@@ -8,17 +8,16 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import { useSelector, useDispatch } from 'react-redux';
+import User from '../pages/user'
+
+
 
 const Header = () => {
   const reduxState = useSelector(state => state.cart)
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
-  const [lgShow, setLgShow] = useState(false);
+  const [show, setShow] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('../data.json')
@@ -39,23 +38,22 @@ const Header = () => {
             <img src={logo} alt="Furns - Furniture" />
           </div>
           <div className='icons'>
-            <span  onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2 fs-3'>
+            <span className='searchIcon mx-2 px-2 fs-3'>
               <FaSistrix />
             </span>
-            <span className='loginIcon mx-2 px-2 border-end border-start fs-3'>
+
+            <span className='loginIcon mx-2 px-2 border-end border-start fs-3' onClick={() => setShow(currentShow => !currentShow)}>
+              <box-icon name='user' color="blue" size="md" />
+              {show ? <User /> : null}
               <FiUser />
             </span>
 
             <Link to='/cart' className='text-decoration-none text-dark'>
-              
-              
-              <Link to='/cart'>
-                <span className='cartIcon mx-2  px-2 fs-3'>
-                  <BsHandbag />
-                </span>
-                <span className='text-dark'>{reduxState?.cart?.length}</span>
-              </Link>
-              </Link>
+              <span className='cartIcon mx-2  px-2 fs-3'>
+                <BsHandbag />
+              </span>
+            </Link>
+
           </div>
         </div>
       </Container>
@@ -75,34 +73,6 @@ const Header = () => {
           </Container>
         </Navbar>
       </div>
-
-      <Modal
-        size="lg"
-        show={lgShow}
-        onHide={() => setLgShow(false)}
-        aria-labelledby="example-modal-sizes-title-lg"
-        className='myModal'
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="example-modal-sizes-title-lg">
-            Search
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-
-          <InputGroup className="mb-3">
-            <Form.Control
-              placeholder="Enter your search keyword.."
-              aria-label=""
-              aria-describedby="basic-addon2"
-              className='modalInput'
-            />
-            <Button className='modalButton' id="button-addon2">
-              <Link className='modalLink' to='/search'><FaSistrix /></Link>
-            </Button>
-          </InputGroup>
-        </Modal.Body>
-      </Modal>
     </div>
   )
 }
