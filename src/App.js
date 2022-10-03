@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
+import Signup from './pages/Signup';
 import Search from './components/Search';
 import { ToastContainer,Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,10 +28,11 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<Signup />} />
         <Route path='/search' element={<Search />} />
       </Routes>
       <StickyModal />
-      <Footer />
+       <Footer/>
       <ToastContainer
         position="top-right"
         autoClose={2000}
