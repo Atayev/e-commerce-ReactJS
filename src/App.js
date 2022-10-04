@@ -10,16 +10,9 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
-<<<<<<< HEAD
 import Info from './pages/Info';
 
 
-=======
-import Signup from './pages/Signup';
-import Search from './components/Search';
-import { ToastContainer,Flip } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
->>>>>>> afc5cd642fdd02bed655519ca615d80eea4fe6b3
 
 
 function App() {
@@ -34,24 +27,13 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/signin' element={<SignIn />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/search' element={<Search />} />
         <Route path='/info/:id' element={<Info/>} />
+
+        
       </Routes>
       <StickyModal />
-       <Footer/>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        transition={Flip}
-      />
+      <Footer />
+      <SignIn/>
     </BrowserRouter>
   );
 }

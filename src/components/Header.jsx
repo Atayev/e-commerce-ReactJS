@@ -8,10 +8,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
 import SearchModal from './SearchModal'
 import '../index.css'
 import Wishlist from './../pages/Wishlist';
+import { useSelector,useDispatch } from 'react-redux';
+import User from '../pages/user'
+
 
 
 const Header = () => {
@@ -21,6 +23,7 @@ const Header = () => {
   const [lgShow, setLgShow] = useState(false);
   const [visible, setVisible] = useState(false);
  
+  const [show, setShow] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('../data.json')
@@ -36,14 +39,14 @@ const Header = () => {
   return (
     <div className='header'>
       <Container>
-        <div className='d-flex justify-content-around py-md-5'>
-          <div className='logo my-4'>
-            <img src={logo} alt="Furns - Furniture" />
-          </div>
-          <div className='icons ml-5 my-4'>
-            <span onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2  fs-3'>
-              <FaSistrix className='icn-1' />
-            </span>
+      <div className='d-flex justify-content-between py-5'>
+        <div className='logo'>
+          <img src={logo} alt="Furns - Furniture" />
+        </div>
+        <div className='icons'>
+          <span className='searchIcon mx-2 px-2 fs-3'>
+            <FaSistrix />
+          </span>
             <span onClick={() => setVisible(!visible)} className='loginIcon  mx-2 px-2 fs-3'>
               <FiUser className='icn-1 drop'/>
               <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>

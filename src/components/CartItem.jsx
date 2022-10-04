@@ -20,12 +20,13 @@ const CartItem = ({id,images,name,price,category,availability}) => {
       toast.warning('Product successfully deleted from your cart')
     }
   return (
-            <div className='d-md-flex  my-2 carts'>
-            <CardGroup className='px-3 py-2' id={id}>
+
+            <div className='d-md-flex  my-2 carts  my-2 carts'>
+            <CardGroup className='px-3 py-2 py-2 ' id={id}>
                  <div className='imageCustom'>
-                    <Card.Img className='mx-3' src={images} />
+                    <Card.Img className='pt-3mx-3' src={images} />
                 </div>
-                <Card.Body className="">
+                <Card.Body className="px-3">
                   <Card.Title className='m-2'>
                       <p>{category}</p>
                       <h6 className='fs-4'>{name}</h6>
@@ -41,7 +42,6 @@ const CartItem = ({id,images,name,price,category,availability}) => {
                     </Button>
               </Card.Body>
             </CardGroup>
-         
             </div>
         
   )
