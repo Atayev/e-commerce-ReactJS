@@ -31,7 +31,7 @@ const SignIn = () => {
           </div>
           <div className="d-flex mt-3">
             <div className="account col-6">
-              <a type="submit" href="#" className="create">Create a account</a>
+              <Link to='/signup' href="#" className="create">Create a account</Link>
             </div>
             <div className="account col-6">
               <a type="submit" href="#" className="forget">Forget Password?</a>

@@ -48,7 +48,7 @@ const Header = () => {
               <FiUser className='icn-1 drop'/>
               <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>
                 <ul>
-                  <li><Link className='indrop' to='/singin'>Sing in</Link></li>
+                  <li><Link className='indrop' to='/signin'>Sing in</Link></li>
                   <li><Link className='indrop' to='/cart'>Cart</Link></li>
                   <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li>
                   <li><Link className='indrop' to='/compare'>Compare</Link></li>
