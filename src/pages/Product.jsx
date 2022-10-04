@@ -3,17 +3,18 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
-import { addToCart, addToWishList} from '../app/redux/cartSlice';
+import { addToCart, addToWishList, removeFromList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { BsTrash,BsHeart,BsArrowsFullscreen } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
 import { NavLink } from "react-router-dom";
+import {toast} from 'react-toastify'
 
 
 const Product = ({id,images, name, price, category,availability }) => {
     
     const dispatch = useDispatch()
-    const [isActive,setActive] = useState(false)
+    const [isActive, setActive] = useState(false)
     const addWishlist = () => {
         setActive(!isActive)
         dispatch(
@@ -30,8 +31,20 @@ const Product = ({id,images, name, price, category,availability }) => {
                 }
                 
             )
-            
         )
+                toast.success('Product added to wishlist')
+    }
+    const removeWishlist = () => {
+        setActive(!isActive)
+        dispatch(
+            removeFromList(
+              {
+                  wishList: {
+                      id:id
+                  }
+              }
+          )
+          )
     }
   const addTo = () => {
     dispatch(
@@ -49,7 +62,7 @@ const Product = ({id,images, name, price, category,availability }) => {
             }
         )
       )
-      console.log('added')
+      toast.info('Product added to cart')
 }
 
     
@@ -67,9 +80,10 @@ const Product = ({id,images, name, price, category,availability }) => {
                     </Card.Text>
                 </Card.Body>
             </CardGroup>
+            
+            <div className='icn' onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn' onClick={() => addWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
-            <div className='icn' ><BsArrowsFullscreen /></div>
+                <div className='icn1'><BsArrowsFullscreen /></div>
             </div>
         </Col>
   )

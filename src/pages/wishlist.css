@@ -7,3 +7,7 @@
     color: var(--specialOrange);
     font-size: 32px;
 }
+tr> td > img {
+    width: 180px;
+    height: 180px;
+}

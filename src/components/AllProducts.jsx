@@ -2,8 +2,6 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import Row from 'react-bootstrap/Row'
-import './ProductCard.css'
-import '../index.css'
 import Product from '../pages/Product'
 const AllProducts = () => {
     const [products, setProducts] = useState();
@@ -37,7 +35,7 @@ const AllProducts = () => {
                             name= {x?.name}
                             price={x?.price} 
                             category={x?.category}
-                    />
+                         />  
                 ))}
             </Row>
         </Container>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSelector} from 'react-redux/es/exports'
 import CartItem from '../components/CartItem'
 import Subtotal from '../components/Subtotal'
+import { BiShoppingBag } from 'react-icons/bi'
 
 const Cart = () => {
   const data = useSelector(state => state.cart)
