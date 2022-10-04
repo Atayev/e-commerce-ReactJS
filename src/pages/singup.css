@@ -16,8 +16,8 @@ input{
 }
 
 .main-container{
-    background-color: var(--slider);
     padding-left: 3rem;
+    box-shadow: 1px 1px 5px 5px gray;
 }
 
 button{
@@ -29,4 +29,10 @@ button{
 button:hover{
     background-color: var(--footer2);
     transition: all 0.3s;
+}
+
+@media(max-width: 425px){
+    .main-container{
+        width: 90% !important;
+    }
 }
