@@ -6,6 +6,7 @@ import {removeFromCart} from '../app/redux/cartSlice'
 import {  CardGroup } from 'react-bootstrap'
 import { FaTrashAlt } from 'react-icons/fa'
 import {toast} from 'react-toastify'
+
 const CartItem = ({id,images,name,price,category,availability}) => {
     const dispatch = useDispatch()
     const removeFrom = () => {
@@ -19,12 +20,12 @@ const CartItem = ({id,images,name,price,category,availability}) => {
       toast.warning('Product successfully deleted from your cart')
     }
   return (
-            <div className='d-md-flex  my-2 carts  my-2 carts'>
-            <CardGroup className='px-3 py-2 py-2 ' id={id}>
+            <div className='d-md-flex  my-2 carts'>
+            <CardGroup className='px-3 py-2' id={id}>
                  <div className='imageCustom'>
-                    <Card.Img className='pt-3mx-3' src={images} />
+                    <Card.Img className='mx-3' src={images} />
                 </div>
-                <Card.Body className="px-3">
+                <Card.Body className="">
                   <Card.Title className='m-2'>
                       <p>{category}</p>
                       <h6 className='fs-4'>{name}</h6>

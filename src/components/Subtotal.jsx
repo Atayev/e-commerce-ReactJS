@@ -2,6 +2,9 @@ import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { getCartTotal,emptyCart } from '../app/redux/cartSlice';
 import {toast} from 'react-toastify'
+
+
+
 const Subtotal = () => {
 
   const total = useSelector(state => state.cart)
@@ -9,7 +12,7 @@ const Subtotal = () => {
   const empty = () => {
     dispatch(
       emptyCart(
-       { cart:[]}
+        { cart: [] }
       )
     )
     toast.warning('deleted all products')

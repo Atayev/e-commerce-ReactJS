@@ -1,0 +1,38 @@
+.mainhead{
+    background-color: var(--slider);
+}
+
+input{
+    height: 3rem;
+    border: 1px solid var(--slider);
+}
+.check{
+    width: 1rem;
+    height: 1rem;
+}
+
+.row1{
+  width: 90%;
+}
+
+.main-container{
+    padding-left: 3rem;
+    box-shadow: 1px 1px 5px 5px gray;
+}
+
+button{
+    background-color: var(--specialOrange);
+    color: #fff;
+    border: none;
+    height: 3rem;
+}
+button:hover{
+    background-color: var(--footer2);
+    transition: all 0.3s;
+}
+
+@media(max-width: 425px){
+    .main-container{
+        width: 90% !important;
+    }
+}

@@ -1,0 +1,116 @@
+.img-prod {
+    height: 20rem;
+}
+
+.card-prod {
+    width: 18rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.product-row {
+    row-gap: 4rem;
+    margin-top: 3rem;
+}
+
+
+.img-prod:hover {
+    transform: rotate(15deg);
+}
+
+.img-product-1 {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid var(--specialOrange);
+}
+
+.hover-effect:hover {
+    transition: all 0.3s;
+    color: var(--specialOrange);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.right-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    top: 15%;
+    right: 12.5%;
+    visibility: hidden;
+}
+@keyframes example {
+    from {
+        top: 20%;
+        opacity: 0; 
+    }
+
+    to {
+        top: 15%;
+        opacity: 1;
+    }
+}
+.card-prod:hover .right-icons {
+    animation-name: example;
+    animation-duration: 0.5s;
+    visibility: visible;
+}
+
+
+.icn {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icn{
+    position: absolute;
+    z-index: 4445;
+    top: 3%;
+    right: 8%;
+}
+
+.icn>svg:hover {
+    transition: all 0.3s;
+    color: var(--specialOrange);
+}
+
+.light-button {
+    position: absolute;
+    font-size: 0.9rem;
+    width: 13rem;
+    bottom: 2%;
+    right: 10%;
+    background-color: #fff;
+    visibility: hidden;
+}
+
+.card-prod:hover .light-button {
+    animation-name: button;
+    animation-duration: 0.5s;
+    visibility: visible;
+}
+
+@keyframes button {
+    from {
+        bottom: 0; 
+        opacity: 0;
+    }
+
+    to {
+        bottom: 2%; 
+        opacity: 1;
+    }
+}
+
+.light-button:hover {
+    transition: all 0.3s;
+    color: var(--specialOrange);
+}
