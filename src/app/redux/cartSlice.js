@@ -33,6 +33,7 @@ export const cartSlice = createSlice({
                 cart:action.payload.cart
             }
         },
+        
         addToWishList: (state=initialState, action) => {
             const wishItem = {
                 id:action.payload.wishList.id,
