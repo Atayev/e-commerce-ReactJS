@@ -13,6 +13,7 @@ import {toast} from 'react-toastify'
 
 
 const Product = ({id,images, name, price, category,availability,description }) => {
+    
     const dispatch = useDispatch()
     const [isActive, setActive] = useState(false)
     const [isActiveCompare, setActiveCompare] = useState(false)

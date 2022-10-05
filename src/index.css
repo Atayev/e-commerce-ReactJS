@@ -546,8 +546,6 @@ li:hover{
   }
   
   .Drop{
-    margin-top: 0%;
-    padding-top: 0%;
     position: absolute;
     z-index: 4444;
     width: 9rem;
@@ -567,7 +565,6 @@ li:hover{
     width: 85%;
   }
   .Drop  ul{
-    
     list-style: none;
   }
    .indrop:hover{
@@ -575,20 +572,11 @@ li:hover{
     transition: all 0.3s; 
    }
 
-   hr{
-    color: grey;
-    margin: 0%;
-    width: 70px;
-    margin-top: 0%;
-  } 
-
   .indrop{
-    
     list-style: none;
     color: var(--footer2);
     font-size: 0.9rem;
     text-decoration: none;
-   
   }
 
 
