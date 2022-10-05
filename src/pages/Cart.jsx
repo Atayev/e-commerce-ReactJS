@@ -21,7 +21,7 @@ const Cart = () => {
       </div>
      
       <div className="d-flex">
-        <div className='  py-5 col-7'>
+        <div className='py-5 col-7 w-100'>
           {data?.cart.length > 0 ? (data?.cart.map((element) => (
             <CartItem
               id={element?.id}

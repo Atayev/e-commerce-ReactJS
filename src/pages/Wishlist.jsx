@@ -16,7 +16,7 @@ const Wishlist = () => {
       </Breadcrumb>
       </div>
     </div><div className='container'>
-        <div className='d-md-flex flex-wrap justify-content-center'>
+        <div className='d-md-flex flex-wrap justify-content-center my-5'>
 
           {state.wishList?.length > 0 ? state?.wishList?.map((wish) => (
             <WishlistItem

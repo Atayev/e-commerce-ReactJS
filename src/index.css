@@ -32,6 +32,7 @@ body {
 }
 .nav {
   width: 100vw;
+  background: var(--nav);
 }
 .menuItem >a{
   color: white;

@@ -32,11 +32,17 @@ const Header = () => {
   }, [nav, setStates])
   return (
     <div className='header'>
-      <Container>
-      <div className='d-flex justify-content-between py-5'>
-        <div className='logo'>
-          <img src={logo} alt="Furns - Furniture" />
+       <div className='nav'>
+          <p className='text-white mx-5 py-2'> Welcome to our site! </p>
         </div>
+      <Container>
+       
+      <div className='d-flex justify-content-between py-5'>
+        <Link to='/home'>
+          <div className='logo'>
+          <img src={logo} alt="Furns - Furniture" />
+            </div>
+            </Link>
         <div className='icons'>
           <span onClick={() => setLgShow(true)}  className='searchIcon icn-1 mx-2 px-2 fs-3'>
             <FaSistrix />
@@ -62,7 +68,7 @@ const Header = () => {
         </div>
       </Container>
       <div className='nav'>
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='nav text-white text-center'>
+        <Navbar collapseOnSelect expand="md" className='nav text-white text-center'>
           <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
