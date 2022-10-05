@@ -29,8 +29,8 @@ const Footer = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore at laudantium eveniet exercitationem optio, soluta ab.</p>
           <div className='social text-white'>
             <ul className='d-flex'>
-            {iconf.map((icon) => (
-              <li className='listItem list-group-item px-2 py-1'><a href="/" className='text-decoration-none text-white'>{ icon }</a></li>)
+            {iconf.map((icon,key) => (
+              <li key={key} className='listItem list-group-item px-2 py-1'><a href="/" className='text-decoration-none text-white'>{ icon }</a></li>)
             )}
             </ul>
           </div>
@@ -39,8 +39,8 @@ const Footer = () => {
           <h4 className='pt-3 footerTitle text-uppercase'>Information</h4>
           <ul>
             {
-                menus?.information.map((menu) => (
-                <li className='list-group-item px-2 py-1'>{ menu }</li>
+                menus?.information.map((menu,key) => (
+                <li key={key} className='list-group-item px-2 py-1'>{ menu }</li>
               ))
               }
           </ul>
@@ -50,8 +50,8 @@ const Footer = () => {
           <h4 className='pt-3 footerTitle text-uppercase'>My Account</h4>
           <ul>
             {
-                menus?.myaccount.map((menu) => (
-               <Link to={'/wishlist'} className='text-decoration-none text-white'> <li className='list-group-item px-2 py-1'>{ menu }</li> </Link>
+                menus?.myaccount.map((menu,key) => (
+               <Link to={'/wishlist'} key={key} className='text-decoration-none text-white'> <li className='list-group-item px-2 py-1'>{ menu }</li> </Link>
               ))
               }
           </ul>

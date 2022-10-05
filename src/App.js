@@ -12,6 +12,8 @@ import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
 import Info from './pages/Info';
 import Signup from './pages/Signup';
+import Compare from './pages/Compare';
+import Products from './pages/Products';
 
 
 
@@ -27,6 +29,8 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/compare' element={<Compare />} />
+        <Route path='/products' element={<Products />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/info/:id' element={<Info/>} />
         <Route path='/signup' element={<Signup />} />

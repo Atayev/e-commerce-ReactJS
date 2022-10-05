@@ -14,9 +14,6 @@ const LatestNews = () => {
       }
       fetchData()
     },[])
-  
-  
-
     return(
       <div className="my-5 about">
          <h1 className="text-center fw-bold fs-1">Latest News</h1>
@@ -37,7 +34,6 @@ const LatestNews = () => {
       
       ))}
           </div>
-        
         </div>    
     )
   

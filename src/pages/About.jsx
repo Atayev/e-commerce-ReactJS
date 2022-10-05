@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <div className='about'>
-      <h1 className='text-dark text-center fs-1 pt-5'>About US</h1>
+      <p className='text-dark text-center fs-1 pt-5'>About US </p>
       <div className='text-center mb-3  py-3 d-flex justify-content-center '>
         <Breadcrumb>
           <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}

@@ -7,7 +7,8 @@ export const getCartTotal = (cart) =>
 const initialState = {
     cart: [],
     wishList: [],
-    search:[]
+    search: [],
+    compare:[]
     }
 export const cartSlice = createSlice({
     name: 'cart',
@@ -46,6 +47,21 @@ export const cartSlice = createSlice({
             let index = state.wishList.findIndex(item => item.id === action.payload.id)
             state.wishList.splice(index, 1)
         },
+        addToCompare: (state=initialState.compare, action) => {
+            const compareItem = {
+                id: action.payload.compare.id,
+                category: action.payload.compare.category,
+                name: action.payload.compare.name,
+                price: action.payload.compare.price,
+                images: action.payload.compare.images,
+                description:action.payload.compare.description
+            }
+            if (state.compare.length < 2) state.compare.push(compareItem)
+        },
+        removeFromCompare: (state, action) => {
+            let index = state.compare.findIndex(item => item.id === action.payload.id)
+            state.compare.splice(index, 1)
+        },
             searchItem: (state, action) => {
                 return {
                     ...state,
@@ -55,5 +71,5 @@ export const cartSlice = createSlice({
     }
 })
 
-export const {addToCart,removeFromCart,emptyCart, addToWishList,removeFromList,searchItem} = cartSlice.actions
+export const {addToCart,removeFromCart,emptyCart, addToWishList,removeFromList,searchItem,addToCompare,removeFromCompare} = cartSlice.actions
 export default cartSlice.reducer

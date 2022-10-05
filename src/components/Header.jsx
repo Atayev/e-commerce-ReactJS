@@ -9,10 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import SearchModal from './SearchModal'
-import '../index.css'
-import Wishlist from './../pages/Wishlist';
-import { useSelector,useDispatch } from 'react-redux';
-import User from '../pages/user'
+import { useSelector } from 'react-redux';
 
 
 
@@ -23,38 +20,41 @@ const Header = () => {
   const [lgShow, setLgShow] = useState(false);
   const [visible, setVisible] = useState(false);
  
-  const [show, setShow] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('../data.json')
       const data = await response.json()
       setNav(data?.menu)
       setStates(Object.entries(nav[0]))
+      
     }
     fetchData()
   }, [nav, setStates])
-
-
-
   return (
     <div className='header'>
-      <Container>
-      <div className='d-flex justify-content-between py-5'>
-        <div className='logo'>
-          <img src={logo} alt="Furns - Furniture" />
+       <div className='nav'>
+          <p className='text-white mx-5 py-2'> Welcome to our site! </p>
         </div>
+      <Container>
+       
+      <div className='d-flex justify-content-between py-5'>
+        <Link to='/home'>
+          <div className='logo'>
+          <img src={logo} alt="Furns - Furniture" />
+            </div>
+            </Link>
         <div className='icons'>
-          <span className='searchIcon mx-2 px-2 fs-3'>
+          <span onClick={() => setLgShow(true)}  className='searchIcon icn-1 mx-2 px-2 fs-3'>
             <FaSistrix />
           </span>
-            <span onClick={() => setVisible(!visible)} className='loginIcon  mx-2 px-2 fs-3'>
+            <span onClick={() => setVisible(!visible)} className='loginIcon border-start border-end  mx-2 px-3  fs-3'>
               <FiUser className='icn-1 drop'/>
-              <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>
-                <ul className="my-2">
-                  <li><Link className='indrop' to='/signin'>Sing in</Link></li><hr/>
-                  <li><Link className='indrop' to='/cart'>Cart</Link></li><hr/>
-                  <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li><hr/>
-                  <li><Link className='indrop pb-5' to='/compare'>Compare</Link></li>
+              <div className={`Drop ${!visible ? 'd-none' : 'd-block'}`}>
+                <ul>
+                  <li><Link className='indrop' to='/signin'>Sing in</Link></li>
+                  <li><Link className='indrop' to='/cart'>Cart</Link></li>
+                  <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li>
+                  <li><Link className='indrop' to='/compare'>Compare</Link></li>
                 </ul>
               </div>
             </span>
@@ -68,7 +68,7 @@ const Header = () => {
         </div>
       </Container>
       <div className='nav'>
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='nav text-white text-center'>
+        <Navbar collapseOnSelect expand="md" className='nav text-white text-center'>
           <Container>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

@@ -4,18 +4,10 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { useParams } from 'react-router-dom';
 import { BsHeart, BsTrash} from 'react-icons/bs'
 import { addToCart, addToWishList} from '../app/redux/cartSlice';
-import Button from 'react-bootstrap/Button';
 import { FaShoppingCart } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
+import {toast} from 'react-toastify'
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
-
-
-import './signin.css';
-
-
-
-
-
 const Info = () => {
   const dispatch = useDispatch()
   const iconf= [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
@@ -55,7 +47,7 @@ const Info = () => {
             }
         )
       )
-      console.log('added')
+    toast.success('Product added to cart')
 }
   const [info, setInfo] = useState({ });
   const [currentProduct, setCurrentProduct] =useState(null);
@@ -71,7 +63,7 @@ const Info = () => {
     
   }, []);
 
-  useEffect (() => {
+  useEffect ( () => {
    
     if (info instanceof Object) {
      Object.values(info).forEach(product =>{
@@ -114,7 +106,6 @@ const Info = () => {
      </div>
      </div>
         </div>
-           
     </div>
   )
 }

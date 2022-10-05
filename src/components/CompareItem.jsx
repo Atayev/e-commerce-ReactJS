@@ -12,10 +12,11 @@ import { NavLink } from "react-router-dom";
 import {toast} from 'react-toastify'
 
 
-const Product = ({id,images, name, price, category,availability,description }) => {
+const CompareItem = ({id,images, name, price, category,availability,description }) => {
+    
     const dispatch = useDispatch()
     const [isActive, setActive] = useState(false)
-    const [isActiveCompare, setActiveCompare] = useState(false)
+    
     const addWishlist = () => {
         setActive(!isActive)
         dispatch(
@@ -35,37 +36,14 @@ const Product = ({id,images, name, price, category,availability,description }) =
         )
                 toast.success('Product added to wishlist')
     }
-    const addCompare = () => {
-        setActiveCompare(!isActiveCompare)
-        dispatch(
-            addToCompare(
-                {
-                    compare: {
-                        id: id,
-                        images: images,
-                        name: name,
-                        price: price,
-                        category: category,
-                        availability: availability,
-                        description:description
-                    }
-                }
-            )
-        )
-                toast.success('Added to Compare List')
-    }
-    const removeCompare = () => {
-        setActiveCompare(!isActiveCompare)
-        dispatch(removeFromCompare({ compare: { id: id } }))
-        
-}
+    
+   
     const removeWishlist = () => {
         setActive(!isActive)
         dispatch(
             removeFromList({ wishList: { id:id } } ) )
     }
     const addTo = () => {
-        setActive(!isActive)
     dispatch(
         addToCart(
             {
@@ -85,7 +63,7 @@ const Product = ({id,images, name, price, category,availability,description }) =
 
     
     return (
-        <Col xl={3} className='card-prod mx-2 my-2'>
+        <Col xl={3} className='card-prod mx-2 my-5'>
             <CardGroup className='card-gr' >
                     <div className='img-product-1'>
 
@@ -106,12 +84,11 @@ const Product = ({id,images, name, price, category,availability,description }) =
             </CardGroup>
             
             <div className='icn' onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
-            <div className='right-icons'>
-                <div className='icn' onClick={()=>!isActiveCompare ? addCompare(): removeCompare()}>{!isActiveCompare ? <BiGitCompare /> : <BsTrash />}</div>
+            <div className='compareDesc mb-5'>
+                {description}
             </div>
-            <div className='desc'>{ description }</div>
         </Col>
   )
 }
 
-export default Product
+export default CompareItem
