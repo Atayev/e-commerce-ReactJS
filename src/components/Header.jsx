@@ -8,76 +8,42 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
-import { useSelector } from 'react-redux';
 import SearchModal from './SearchModal'
-import '../index.css'
-import Wishlist from './../pages/Wishlist';
-=======
-import { useSelector,useDispatch } from 'react-redux';
-import User from '../pages/user'
+import { useSelector } from 'react-redux';
 
->>>>>>> d7f2e63440262edbf28a7b4fcaab82e7cbf8947b
 
 
 const Header = () => {
   const reduxState = useSelector(state => state.cart)
   const [nav, setNav] = useState()
   const [states, setStates] = useState([])
-<<<<<<< HEAD
   const [lgShow, setLgShow] = useState(false);
   const [visible, setVisible] = useState(false);
  
-=======
-  const [show, setShow] = useState(false);
->>>>>>> d7f2e63440262edbf28a7b4fcaab82e7cbf8947b
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('../data.json')
       const data = await response.json()
       setNav(data?.menu)
       setStates(Object.entries(nav[0]))
+      
     }
     fetchData()
   }, [nav, setStates])
-
-
-
   return (
     <div className='header'>
       <Container>
-<<<<<<< HEAD
-        <div className='d-flex justify-content-around py-md-5'>
-          <div className='logo my-4'>
-            <img src={logo} alt="Furns - Furniture" />
-          </div>
-          <div className='icons ml-5 my-4'>
-            <span onClick={() => setLgShow(true)} className='searchIcon mx-2 px-2  fs-3'>
-              <FaSistrix className='icn-1' />
-=======
       <div className='d-flex justify-content-between py-5'>
         <div className='logo'>
           <img src={logo} alt="Furns - Furniture" />
         </div>
         <div className='icons'>
-          <span className='searchIcon mx-2 px-2 fs-3'>
+          <span onClick={() => setLgShow(true)}  className='searchIcon icn-1 mx-2 px-2 fs-3'>
             <FaSistrix />
           </span>
-          
-          <span className='loginIcon mx-2 px-2 border-end border-start fs-3' onClick={() => setShow(currentShow => !currentShow)}>
-            <box-icon name='user' color="blue" size="md"/>
-              { show ? <User/> : null }
-            <FiUser />
-          </span> 
-          
-            {/* <Link to='/cart' className='text-decoration-none text-dark'>
-            <span className='cartIcon mx-2  px-2 fs-3'>
-              <BsHandbag />   
->>>>>>> d7f2e63440262edbf28a7b4fcaab82e7cbf8947b
-            </span>
-            <span onClick={() => setVisible(!visible)} className='loginIcon  mx-2 px-2 fs-3'>
+            <span onClick={() => setVisible(!visible)} className='loginIcon border-start border-end  mx-2 px-3  fs-3'>
               <FiUser className='icn-1 drop'/>
-              <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>
+              <div className={`Drop ${!visible ? 'd-none' : 'd-block'}`}>
                 <ul>
                   <li><Link className='indrop' to='/signin'>Sing in</Link></li>
                   <li><Link className='indrop' to='/cart'>Cart</Link></li>
@@ -86,7 +52,6 @@ const Header = () => {
                 </ul>
               </div>
             </span>
-            </Link> */}
             <Link to='/cart' className='text-decoration-none text-dark'>
               <span className='cartIcon mx-2 px-2 fs-3'>
                 <BsHandbag className='icn-1' />
@@ -95,12 +60,7 @@ const Header = () => {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </Container>
-=======
-        
-        </Container>
->>>>>>> d7f2e63440262edbf28a7b4fcaab82e7cbf8947b
       <div className='nav'>
         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='nav text-white text-center'>
           <Container>
@@ -117,11 +77,7 @@ const Header = () => {
           </Container>
         </Navbar>
       </div>
-<<<<<<< HEAD
       <SearchModal show={lgShow} showFunc={() => setLgShow(false)} />
-=======
-      {/* <SearchModal show={ lgShow } showFunc={()=>setLgShow(false)} /> */}
->>>>>>> d7f2e63440262edbf28a7b4fcaab82e7cbf8947b
     </div>
   )
 }

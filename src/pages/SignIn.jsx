@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux/es/exports'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import './signin.css';
 
 
 const SignIn = () => {
@@ -31,10 +29,10 @@ const SignIn = () => {
           </div>
           <div className="d-flex mt-3">
             <div className="account col-6">
-              <Link to='/signup' href="#" className="create">Create a account</Link>
+              <Link to='/signup' className="create">Create a account</Link>
             </div>
             <div className="account col-6">
-              <a type="submit" href="#" className="forget">Forget Password?</a>
+              <input type="submit" value='Forget Password?' className="forget" />
             </div>
           </div>
         </form>

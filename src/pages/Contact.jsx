@@ -9,12 +9,15 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 const Contact = () => {
   return (
     <div>
-      <div className='breadcrump'>
-      <h1>CONTACT</h1>
-      <Breadcrumb>
-        <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}
-        <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Contact </Link>
-      </Breadcrumb>
+      <div className='about text-center'>
+        <p className='pt-5 fs-1'>Contact</p>
+        <div className='pb-5 d-flex justify-content-center'>
+        <Breadcrumb >
+              <Link href="#" className='px-2 text-decoration-none aboutTitle text-uppercase'>Home </Link>{" / "}
+              <Link className='px-2 text-decoration-none  aboutTitle text-uppercase'> Contact </Link>
+          </Breadcrumb>
+        </div>
+      
       </div>
       <Container className='my-2'>
       <iframe title='iframe' style={{ width: "100%" }} height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=quba&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>

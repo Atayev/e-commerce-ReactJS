@@ -5,7 +5,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
 import { addToCart, addToWishList, removeFromList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
-import { BsTrash,BsHeart,BsArrowsFullscreen } from 'react-icons/bs'
+import { BsTrash, BsHeart, BsArrowsFullscreen } from 'react-icons/bs'
+import {BiGitCompare} from 'react-icons/bi'
 import Button from 'react-bootstrap/Button';
 import { NavLink } from "react-router-dom";
 import {toast} from 'react-toastify'
@@ -67,11 +68,17 @@ const Product = ({id,images, name, price, category,availability }) => {
 
     
     return (
-        <Col xl={3} className='card-prod'>
+        <Col xl={3} className='card-prod mx-2 my-2'>
             <CardGroup className='card-gr' >
-            <NavLink to={`/info/${id}`}>     <div className='img-product-1' ><Card.Img variant="top" src={images} className='img-prod' />
-                    <Button className='light-button' variant="light" onClick={()=>addTo()}><FaShoppingCart className='mr-5' /> Add to cart</Button>{' '}
-                </div></NavLink>
+                    <div className='img-product-1'>
+
+                <NavLink to={`/info/${id}`}>
+                        <Card.Img variant="top" src={images} className='img-prod' /> 
+                </NavLink>
+                        
+                        <Button className='light-button' variant="light" onClick={() => addTo()}>
+                            <FaShoppingCart className='mr-5' /> Add to cart</Button>{' '}
+                </div>
                 <Card.Body className='mt-3'>
                     <Card.Title className='hover-effect text-center'><p className='fs-6'>{category}</p></Card.Title>
                     <Card.Title className='hover-effect text-center'><h6 className='fw-bold'>{name}</h6></Card.Title>
@@ -83,7 +90,7 @@ const Product = ({id,images, name, price, category,availability }) => {
             
             <div className='icn' onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn1'><BsArrowsFullscreen /></div>
+                <div className='icn'><BiGitCompare /></div>
             </div>
         </Col>
   )
