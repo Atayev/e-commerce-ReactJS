@@ -391,6 +391,10 @@ li:hover{
   transition: all 0.3s;
   color: var(--specialOrange);
 }
+.icn2>svg:hover {
+  transition: all 0.3s;
+  color: var(--specialOrange);
+}
 
 .light-button {
   position: absolute;
