@@ -15,7 +15,7 @@ const LatestNews = () => {
       fetchData()
     },[])
     return(
-      <div className="my-5 about">
+      <div className="py-5 about">
          <h1 className="text-center fw-bold fs-1">Latest News</h1>
           <p className="text-center fs-5 my-3">Torem ipsum dolor sit amet, consectetur adipisicing elitsed do<br/> eiusmo tempor incididunt ut labore</p>
           <div className='container d-md-flex'>
