@@ -11,6 +11,7 @@ import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import SignIn from './pages/SignIn';
 import Info from './pages/Info';
+import Signup from './pages/Signup';
 
 
 
@@ -28,12 +29,10 @@ function App() {
         <Route path='/wishlist' element={<Wishlist />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/info/:id' element={<Info/>} />
-
-        
+        <Route path='/signup' element={<Signup />} />
       </Routes>
       <StickyModal />
       <Footer />
-      <SignIn/>
     </BrowserRouter>
   );
 }

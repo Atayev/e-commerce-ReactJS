@@ -565,6 +565,8 @@ li:hover{
   }
   
   .Drop{
+    margin-top: 0%;
+    padding-top: 0%;
     position: absolute;
     z-index: 4444;
     width: 9rem;
@@ -584,6 +586,7 @@ li:hover{
     width: 85%;
   }
   .Drop  ul{
+    
     list-style: none;
   }
    .indrop:hover{
@@ -591,11 +594,20 @@ li:hover{
     transition: all 0.3s; 
    }
 
+   hr{
+    color: grey;
+    margin: 0%;
+    width: 70px;
+    margin-top: 0%;
+  } 
+
   .indrop{
+    
     list-style: none;
     color: var(--footer2);
     font-size: 0.9rem;
     text-decoration: none;
+   
   }
 
 
@@ -658,7 +670,40 @@ li:hover{
   }
 }
 
-  
+.images-info{
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+@media screen and (max-width:1050px){
+  .col1{
+    width: 40%;
+  }
+  .col2{
+    width: 50%;
+  }
+}
+@media screen and (max-width:880px){
+  .col1{
+    width: 50%;
+  }
+  .col2{
+    width: 40%;
+  }
+}
+@media screen and (max-width:700px){
+  .infobox{
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .col1{
+    margin-left: 20%; 
+  }
+  .col2{
+   margin-right: 40%;
+   
+  }
+}
   
   
 

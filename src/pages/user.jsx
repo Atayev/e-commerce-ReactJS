@@ -18,12 +18,12 @@ const User = () => {
   return (
     
         <Col className="user">
-        <ul className="eJwAVN show">
+        <ul className="eJwAVN show mb-5">
         {
        user?.map((item,key) => (
         <li>
-          <a href="#" className="align-items-center">{item}</a>
-          <hr/>
+          <a href="#" className="align-items-center mb-5">{item}</a>
+          <hr className="hr"/>
          </li>
          ))
         }

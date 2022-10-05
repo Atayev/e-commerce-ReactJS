@@ -100,12 +100,12 @@ const Info = () => {
        </Breadcrumb>
      </div>
        </div>
-     <div className="d-flex contain py-5">
+     <div className="d-flex contain py-5 infobox">
        
-     <div className="col-5 px-5 col-md-4 col-sm-4">
+     <div className="col-5 px-5 col-md-4 col-lg-4 col-sm-4 col1">
        <img src={currentProduct?.images} alt="" className="images-info"/>
      </div>
-     <div className="col-5 mx-5 col-md-6 mt-3 col-sm-4 ">
+     <div className="col-5 mx-5 col-md-6 col-lg-6 mt-3 col-sm-4 col2">
       <h4 className="pt-3">{currentProduct?.name}</h4>
       <span className="">{currentProduct?.price}</span>{" $ "}
      <p className='text-dark fs-6 currentpr pt-3'>{currentProduct?.description}</p>

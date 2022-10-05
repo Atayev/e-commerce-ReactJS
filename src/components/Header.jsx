@@ -50,11 +50,11 @@ const Header = () => {
             <span onClick={() => setVisible(!visible)} className='loginIcon  mx-2 px-2 fs-3'>
               <FiUser className='icn-1 drop'/>
               <div className={`Drop ${visible ? 'd-none' : 'd-block'}`}>
-                <ul>
-                  <li><Link className='indrop' to='/signin'>Sing in</Link></li>
-                  <li><Link className='indrop' to='/cart'>Cart</Link></li>
-                  <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li>
-                  <li><Link className='indrop' to='/compare'>Compare</Link></li>
+                <ul className="my-2">
+                  <li><Link className='indrop' to='/signin'>Sing in</Link></li><hr/>
+                  <li><Link className='indrop' to='/cart'>Cart</Link></li><hr/>
+                  <li><Link className='indrop' to='/wishlist'>Wishlist</Link></li><hr/>
+                  <li><Link className='indrop pb-5' to='/compare'>Compare</Link></li>
                 </ul>
               </div>
             </span>

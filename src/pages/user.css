@@ -1,10 +1,10 @@
 .user{
-    width: 80px;
-    height: 100px;
-    border: 1px solid white;
-    position: absolute;
-    margin-top: 2px;
-    z-index: 2;
+  width: 80px;
+  height: 120px;
+  border: 1px solid white;
+  position: absolute;
+  margin-top: 2px;
+  z-index: 2;
    
 }
 ul {
@@ -14,7 +14,7 @@ ul {
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
+    padding-inline-start: 10px;
      list-style: none;
 
 }
@@ -23,9 +23,10 @@ a{
   color: grey;
   font-size: 12px;
 }
-hr{
+.hr{
+  color: grey;
   margin: 0%;
-  width: 60px;
+  width: 70px;
 }
 .eJwAVN{
   margin: 0px;

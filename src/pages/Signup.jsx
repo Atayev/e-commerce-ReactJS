@@ -20,13 +20,13 @@ const Signup = () => {
 
       <div className='container-fluid mb-5 mt-5 d-flex justify-content-center'>
         <div className='col-5 main-container'>
-          <div className='mt-2 row row1 row3'>
+          <div className='mt-3 row row1 row3'>
             <div className='col'>
               <label for='name'>First name*</label>
               <input id='name' type='text' />
             </div>
 
-            <div className='col'>
+            <div className='col '>
               <label for='surname'>Last name*</label>
               <input  id='surname' type='text' />
             </div>
