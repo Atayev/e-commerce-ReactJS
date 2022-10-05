@@ -110,7 +110,6 @@ const Product = ({id,images, name, price, category,availability,description }) =
                 <div className='icn'><BsArrowsFullscreen /></div>
                 <div className='icn2' onClick={()=>!isActiveCompare ? addCompare(): removeCompare()}>
                 {!isActiveCompare ? <BiGitCompare /> : <BsTrash />}</div>
-               
             </div>
             <div className='desc'>{ description }</div>
         </Col>
