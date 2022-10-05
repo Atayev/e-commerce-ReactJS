@@ -40,7 +40,7 @@ function Products() {
         else if (sortProp === 'price2') setProducts(products.sort((product1, product2) => product2.price - product1.price))
         else if (sortProp === 'name1') setProducts(products.sort((product1,product2)=>product1.name>product2.name ? 1 : -1))
         else if (sortProp === 'name2') setProducts(products.sort((product1, product2) => product1.name > product2.name ? -1 : 1))
-        else setProducts(...products)
+        else setProducts(products)
     }
 
     // const handleSortByCategories = (sortProp2) => {

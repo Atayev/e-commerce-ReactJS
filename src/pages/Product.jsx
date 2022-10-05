@@ -108,6 +108,7 @@ const Product = ({id,images, name, price, category,availability,description }) =
             <div className='icn' onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
                 <div className='icn' onClick={()=>!isActiveCompare ? addCompare(): removeCompare()}>{!isActiveCompare ? <BiGitCompare /> : <BsTrash />}</div>
+                <div className='icn'><BsArrowsFullscreen /></div>
             </div>
             <div className='desc'>{ description }</div>
         </Col>
