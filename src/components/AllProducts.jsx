@@ -35,6 +35,7 @@ const AllProducts = () => {
                             name= {x?.name}
                             price={x?.price} 
                             category={x?.category}
+                            description={x?.description}
                          />  
                 ))}
             </Row>

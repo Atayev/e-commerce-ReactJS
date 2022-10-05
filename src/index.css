@@ -989,3 +989,9 @@ button:hover{
   width: 384px;
   height: 452px;
 }
+.desc {
+  display: none;
+}
+.compareDesc {
+  display: block;
+}
