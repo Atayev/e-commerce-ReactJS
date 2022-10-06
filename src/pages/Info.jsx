@@ -5,12 +5,16 @@ import { useParams } from 'react-router-dom';
 import { BsHeart, BsTrash} from 'react-icons/bs'
 import { addToCart, addToWishList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
-import { useDispatch } from 'react-redux'
-import {toast} from 'react-toastify'
+import { useDispatch } from 'react-redux';
+import {toast} from 'react-toastify';
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
+
 const Info = () => {
-  const dispatch = useDispatch()
-  const iconf= [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
+  const [info, setInfo] = useState({ });
+  const [currentProduct, setCurrentProduct] = useState(null);
+  const {id} = useParams();
+  const dispatch = useDispatch();
+  const iconf = [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
   const [isActive,setActive] = useState(false)
   const addWishlist = () => {
     setActive(!isActive)
@@ -49,9 +53,7 @@ const Info = () => {
       )
     toast.success('Product added to cart')
 }
-  const [info, setInfo] = useState({ });
-  const [currentProduct, setCurrentProduct] =useState(null);
-  const {id} =useParams();
+  
 
   useEffect(() =>{
     const fetchData = async() =>{

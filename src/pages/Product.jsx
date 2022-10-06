@@ -10,10 +10,12 @@ import {BiGitCompare} from 'react-icons/bi'
 import Button from 'react-bootstrap/Button';
 import { NavLink } from "react-router-dom";
 import {toast} from 'react-toastify'
+import ProductsModal from './ProductsModal';
 
 
 const Product = ({id,images, name, price, category,availability,description }) => {
-    
+    const [modalShow, setModalShow] = React.useState(false);
+
     const dispatch = useDispatch()
     const [isActive, setActive] = useState(false)
     const [isActiveCompare, setActiveCompare] = useState(false)
@@ -108,10 +110,13 @@ const Product = ({id,images, name, price, category,availability,description }) =
             
             <div className='icn1' onClick={() =>!isActive ?  addWishlist() : removeWishlist()}>{!isActive ? <BsHeart /> : <BsTrash />  }</div>
             <div className='right-icons'>
-                <div className='icn'><BsArrowsFullscreen /></div>
+                <div className='icn' onClick={() => setModalShow(true)}><BsArrowsFullscreen /></div>
                 <div className='icn2' onClick={()=>!isActiveCompare ? addCompare(): removeCompare()}>
                 {!isActiveCompare ? <BiGitCompare /> : <BsTrash />}</div>
-               
+                <ProductsModal
+                show={modalShow}
+                productId={id}
+                onHide={() => setModalShow(false)}/>
             </div>
             <div className='desc'>{ description }</div>
         </Col>
