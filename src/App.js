@@ -17,6 +17,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Info from './pages/Info';
 import Products from './pages/Products';
 import Compare from './pages/Compare';
+import ProductsModal from './pages/ProductsModal';
+
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +36,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/info/:id' element={<Info />} />
         <Route path='/search' element={<Search />} />
+        <Route path='/productsmodal/:id' element={<ProductsModal />} />
       </Routes>
       <StickyModal />
        <Footer/>
@@ -54,3 +57,4 @@ function App() {
 }
 
 export default App;
+

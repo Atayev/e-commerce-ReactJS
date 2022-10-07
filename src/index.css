@@ -1025,3 +1025,50 @@ button:hover{
 .compareDesc {
   display: block;
 }
+.modal{
+ margin: auto;
+  z-index: 4460;
+}
+.modalheader{
+  border: none;
+  color: white;
+}
+.images-productmodal{
+  width: 350px;
+  height: 400px;
+}
+@media(max-width: 992px){
+  .infomodal{
+      flex-direction: column;
+  }
+  .colm1{
+    width: 100%;
+  }
+  .colm2{
+    margin-top: 15px;
+    width: 90%;
+  }
+  
+}
+.btn-close{
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    z-index: 99;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--specialOrange);
+    transition: all 1s ease;
+    
+}
+.btn-close:hover{
+  background-color: rgb(255, 112, 4);
+  color: #f1f1f1;
+}
+.wishfs{
+  font-size: 12px;
+}
+
+
+
