@@ -7,7 +7,6 @@ import { addToCart, addToWishList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { useDispatch } from 'react-redux';
 import {toast} from 'react-toastify';
-import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
 
 const Info = () => {
   const [info, setInfo] = useState({ });
