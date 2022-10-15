@@ -3,10 +3,9 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import { useDispatch } from 'react-redux'
-import { addToCart, addToCompare, addToWishList, removeFromCompare, removeFromList} from '../app/redux/cartSlice';
+import { addToCart, addToWishList,  removeFromList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
-import { BsTrash, BsHeart, BsArrowsFullscreen } from 'react-icons/bs'
-import {BiGitCompare} from 'react-icons/bi'
+import { BsTrash, BsHeart } from 'react-icons/bs'
 import Button from 'react-bootstrap/Button';
 import { NavLink } from "react-router-dom";
 import {toast} from 'react-toastify'

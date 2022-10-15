@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { useParams } from 'react-router-dom';
-import { BsHeart, BsTrash} from 'react-icons/bs'
+import { BsHeart } from 'react-icons/bs'
 import { addToCart, addToWishList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { useDispatch } from 'react-redux';
@@ -14,7 +14,6 @@ const Info = () => {
   const [currentProduct, setCurrentProduct] = useState(null);
   const {id} = useParams();
   const dispatch = useDispatch();
-  const iconf = [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
   const [isActive,setActive] = useState(false)
   const addWishlist = () => {
     setActive(!isActive)
@@ -75,7 +74,7 @@ const Info = () => {
        }
       }) 
     }
-    
+    // eslint-disable-next-line
   },[info] );
 
 

@@ -1,21 +1,16 @@
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { addToCart, addToWishList} from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
-import { BsHeart, BsTrash} from 'react-icons/bs'
+import { BsHeart} from 'react-icons/bs'
 import React, { useEffect, useState } from 'react'
 import {toast} from 'react-toastify'
-import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube, BsPinterest } from 'react-icons/bs'
-import { useParams } from 'react-router-dom';
-import { CloseButton } from 'react-bootstrap';
+
 
 function ProductsModal(props){
   const [info, setInfo] = useState({ });
   const [currentProduct, setCurrentProduct] =useState(null);
-  // console.log(props.productId);
   const dispatch = useDispatch()
-  const iconf = [<BsFacebook />, <BsTwitter />, <BsLinkedin/>, <BsYoutube/>, <BsPinterest/>]
   const [isActive,setActive] = useState(false)
   const addWishlist = () => {
     setActive(!isActive)
@@ -76,9 +71,8 @@ function ProductsModal(props){
        }
       }) 
     }
-    
+    // eslint-disable-next-line
   },[info] );
-console.log(currentProduct);
     return(
       <Modal className="modal"
       {...props}

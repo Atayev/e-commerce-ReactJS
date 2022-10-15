@@ -1,8 +1,8 @@
-import React , {useState} from 'react'
+import React  from 'react'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addToCart, removeFromList } from '../app/redux/cartSlice';
 import { FaShoppingCart } from 'react-icons/fa'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
