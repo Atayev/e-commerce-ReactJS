@@ -26,7 +26,7 @@ const Header = () => {
       const data = await response.json()
       setNav(data?.menu)
       setStates(Object.entries(nav[0]))
-      
+      console.log(Object.entries(nav[0]))
     }
     fetchData()
   }, [nav, setStates])

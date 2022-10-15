@@ -6,7 +6,6 @@ import {useSelector} from 'react-redux'
 import CompareItem from '../components/CompareItem'
 function Compare() {
   const { compare } = useSelector(state => state.cart)
-  console.log(compare)
   return (
     <div className='compare'>
       <div className='headSection'>
